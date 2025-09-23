@@ -1,0 +1,99 @@
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+const Navigation = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsOpen(false);
+    }
+  };
+
+  const navItems = [
+    { id: 'inicio', label: 'Inicio' },
+    { id: 'nosotros', label: 'Nosotros' },
+    { id: 'productos', label: 'Productos' },
+    { id: 'galeria', label: 'Galería' },
+    { id: 'contacto', label: 'Contacto' },
+  ];
+
+  return (
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <div className="flex items-center space-x-2">
+            <div className="font-heading font-bold text-2xl text-primary">
+              JEMEX
+            </div>
+            <div className="text-sm text-muted-foreground font-medium tracking-wider">
+              COMMERCE
+            </div>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+              >
+                {item.label}
+              </button>
+            ))}
+            <Button 
+              onClick={() => scrollToSection('contacto')}
+              className="bg-gradient-primary hover:opacity-90 transition-opacity"
+            >
+              Contactanos
+            </Button>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2"
+            >
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </Button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        <div className={cn(
+          "md:hidden transition-all duration-300 ease-in-out overflow-hidden",
+          isOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
+        )}>
+          <div className="py-4 space-y-4">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="block w-full text-left text-foreground hover:text-primary transition-colors duration-200 font-medium py-2"
+              >
+                {item.label}
+              </button>
+            ))}
+            <Button 
+              onClick={() => scrollToSection('contacto')}
+              className="w-full bg-gradient-primary hover:opacity-90 transition-opacity mt-4"
+            >
+              Contactanos
+            </Button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navigation;
