@@ -2,6 +2,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Target, Eye, Heart, Users, Plane, Handshake, Globe2, TrendingUp } from "lucide-react";
 import workerImage from "@/assets/worker-field.jpg";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
+
 
 const About = () => {
   const { ref: aboutRef, isVisible } = useScrollAnimation(0.1);
