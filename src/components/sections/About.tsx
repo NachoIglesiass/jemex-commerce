@@ -4,6 +4,9 @@ import { Target, Eye, Heart, Users, Plane, Handshake, Globe2, TrendingUp } from 
 import workerImage from "@/assets/worker-field.jpg";
 
 const About = () => {
+  const { ref: aboutRef, isVisible } = useScrollAnimation(0.1);
+  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation(0.2);
+  const { ref: valuesRef, isVisible: valuesVisible } = useScrollAnimation(0.1);
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
