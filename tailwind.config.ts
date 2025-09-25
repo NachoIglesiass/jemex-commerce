@@ -91,19 +91,63 @@ const config: Config = {
         heading: ["Plus Jakarta Sans", "Inter", "system-ui", "sans-serif"],
       },
       keyframes: {
-        "accordion-down": { from: { height: "0" }, to: { height: "var(--radix-accordion-content-height)" } },
-        "accordion-up": { from: { height: "var(--radix-accordion-content-height)" }, to: { height: "0" } },
-        "fade-in-up": { "0%": { opacity: "0", transform: "translateY(40px) scale(0.95)" }, "100%": { opacity: "1", transform: "translateY(0) scale(1)" } },
-        "fade-in-down": { "0%": { opacity: "0", transform: "translateY(-40px) scale(0.95)" }, "100%": { opacity: "1", transform: "translateY(0) scale(1)" } },
-        "fade-in-left": { "0%": { opacity: "0", transform: "translateX(-40px) scale(0.95)" }, "100%": { opacity: "1", transform: "translateX(0) scale(1)" } },
-        "fade-in-right": { "0%": { opacity: "0", transform: "translateX(40px) scale(0.95)" }, "100%": { opacity: "1", transform: "translateX(0) scale(1)" } },
-        "slide-up": { "0%": { transform: "translateY(100%)" }, "100%": { transform: "translateY(0)" } },
-        "zoom-in": { "0%": { opacity: "0", transform: "scale(0.8) rotate(-3deg)" }, "100%": { opacity: "1", transform: "scale(1) rotate(0deg)" } },
-        "glow-pulse": { "0%, 100%": { boxShadow: "0 0 20px hsl(var(--accent) / 0.3)" }, "50%": { boxShadow: "0 0 40px hsl(var(--accent) / 0.6), 0 0 60px hsl(var(--accent) / 0.3)" } },
-        float: { "0%, 100%": { transform: "translateY(0px)" }, "50%": { transform: "translateY(-6px)" } },
-        shimmer: { "0%": { transform: "translateX(-100%)" }, "100%": { transform: "translateX(100%)" } },
-        "text-focus": { "0%": { filter: "blur(12px)", opacity: "0" }, "100%": { filter: "blur(0px)", opacity: "1" } },
-        "bounce-in": { "0%": { transform: "scale(0.3)", opacity: "0" }, "50%": { transform: "scale(1.05)", opacity: "0.5" }, "70%": { transform: "scale(0.9)", opacity: "0.7" }, "100%": { transform: "scale(1)", opacity: "1" } },
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "fade-in-up": {
+          "0%": { opacity: "0", transform: "translateY(40px) scale(0.95)" },
+          "100%": { opacity: "1", transform: "translateY(0) scale(1)" },
+        },
+        "fade-in-down": {
+          "0%": { opacity: "0", transform: "translateY(-40px) scale(0.95)" },
+          "100%": { opacity: "1", transform: "translateY(0) scale(1)" },
+        },
+        "fade-in-left": {
+          "0%": { opacity: "0", transform: "translateX(-40px) scale(0.95)" },
+          "100%": { opacity: "1", transform: "translateX(0) scale(1)" },
+        },
+        "fade-in-right": {
+          "0%": { opacity: "0", transform: "translateX(40px) scale(0.95)" },
+          "100%": { opacity: "1", transform: "translateX(0) scale(1)" },
+        },
+        "slide-up": {
+          "0%": { transform: "translateY(100%)" },
+          "100%": { transform: "translateY(0)" },
+        },
+        "zoom-in": {
+          "0%": { opacity: "0", transform: "scale(0.8) rotate(-3deg)" },
+          "100%": { opacity: "1", transform: "scale(1) rotate(0deg)" },
+        },
+        "glow-pulse": {
+          "0%, 100%": { boxShadow: "0 0 20px hsl(var(--accent) / 0.3)" },
+          "50%": {
+            boxShadow:
+              "0 0 40px hsl(var(--accent) / 0.6), 0 0 60px hsl(var(--accent) / 0.3)",
+          },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-6px)" },
+        },
+        shimmer: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
+        "text-focus": {
+          "0%": { filter: "blur(12px)", opacity: "0" },
+          "100%": { filter: "blur(0px)", opacity: "1" },
+        },
+        "bounce-in": {
+          "0%": { transform: "scale(0.3)", opacity: "0" },
+          "50%": { transform: "scale(1.05)", opacity: "0.5" },
+          "70%": { transform: "scale(0.9)", opacity: "0.7" },
+          "100%": { transform: "scale(1)", opacity: "1" },
+        },
         "pulse-glow": {
           "0%, 100%": { textShadow: "0 0 8px rgba(255,255,255,0.3)" },
           "50%": { textShadow: "0 0 12px rgba(255,255,255,0.4)" },
