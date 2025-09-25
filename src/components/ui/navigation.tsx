@@ -19,7 +19,6 @@ const Navigation = () => {
     { id: 'nosotros', label: 'Nosotros' },
     { id: 'productos', label: 'Productos' },
     { id: 'galeria', label: 'Galería' },
-    { id: 'contacto', label: 'Contacto' },
   ];
 
   return (
