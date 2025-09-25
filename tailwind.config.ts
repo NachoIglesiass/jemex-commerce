@@ -1,8 +1,14 @@
 import type { Config } from "tailwindcss";
+import tailwindAnimate from "tailwindcss-animate"; // ✅ Importar plugin correctamente
 
-export default {
+const config: Config = {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -67,13 +73,13 @@ export default {
         },
       },
       backgroundImage: {
-        'gradient-primary': 'var(--gradient-primary)',
-        'gradient-secondary': 'var(--gradient-secondary)', 
-        'gradient-hero': 'var(--gradient-hero)',
+        "gradient-primary": "var(--gradient-primary)",
+        "gradient-secondary": "var(--gradient-secondary)",
+        "gradient-hero": "var(--gradient-hero)",
       },
       boxShadow: {
-        'elegant': 'var(--shadow-elegant)',
-        'soft': 'var(--shadow-soft)',
+        elegant: "var(--shadow-elegant)",
+        soft: "var(--shadow-soft)",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -81,70 +87,31 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        heading: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+        sans: ["Inter", "system-ui", "sans-serif"],
+        heading: ["Plus Jakarta Sans", "Inter", "system-ui", "sans-serif"],
       },
       keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
-        "fade-in-up": {
-          "0%": { opacity: "0", transform: "translateY(40px) scale(0.95)" },
-          "100%": { opacity: "1", transform: "translateY(0) scale(1)" }
-        },
-        "fade-in-down": {
-          "0%": { opacity: "0", transform: "translateY(-40px) scale(0.95)" },
-          "100%": { opacity: "1", transform: "translateY(0) scale(1)" }
-        },
-        "fade-in-left": {
-          "0%": { opacity: "0", transform: "translateX(-40px) scale(0.95)" },
-          "100%": { opacity: "1", transform: "translateX(0) scale(1)" }
-        },
-        "fade-in-right": {
-          "0%": { opacity: "0", transform: "translateX(40px) scale(0.95)" },
-          "100%": { opacity: "1", transform: "translateX(0) scale(1)" }
-        },
-        "slide-up": {
-          "0%": { transform: "translateY(100%)" },
-          "100%": { transform: "translateY(0)" }
-        },
-        "zoom-in": {
-          "0%": { opacity: "0", transform: "scale(0.8) rotate(-3deg)" },
-          "100%": { opacity: "1", transform: "scale(1) rotate(0deg)" }
-        },
-        "glow-pulse": {
-          "0%, 100%": { boxShadow: "0 0 20px hsl(var(--accent) / 0.3)" },
-          "50%": { boxShadow: "0 0 40px hsl(var(--accent) / 0.6), 0 0 60px hsl(var(--accent) / 0.3)" }
-        },
-        "float": {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-10px)" }
-        },
-        "shimmer": {
-          "0%": { transform: "translateX(-100%)" },
-          "100%": { transform: "translateX(100%)" }
-        },
-        "morph": {
-          "0%, 100%": { borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%" },
-          "50%": { borderRadius: "30% 60% 70% 40% / 50% 60% 30% 60%" }
-        },
-        "text-focus": {
-          "0%": { filter: "blur(12px)", opacity: "0" },
-          "100%": { filter: "blur(0px)", opacity: "1" }
-        },
-        "bounce-in": {
-          "0%": { transform: "scale(0.3)", opacity: "0" },
-          "50%": { transform: "scale(1.05)" },
-          "70%": { transform: "scale(0.9)" },
-          "100%": { transform: "scale(1)", opacity: "1" }
-        }
+        "accordion-down": { from: { height: "0" }, to: { height: "var(--radix-accordion-content-height)" } },
+        "accordion-up": { from: { height: "var(--radix-accordion-content-height)" }, to: { height: "0" } },
+        "fade-in-up": { "0%": { opacity: "0", transform: "translateY(40px) scale(0.95)" }, "100%": { opacity: "1", transform: "translateY(0) scale(1)" } },
+        "fade-in-down": { "0%": { opacity: "0", transform: "translateY(-40px) scale(0.95)" }, "100%": { opacity: "1", transform: "translateY(0) scale(1)" } },
+        "fade-in-left": { "0%": { opacity: "0", transform: "translateX(-40px) scale(0.95)" }, "100%": { opacity: "1", transform: "translateX(0) scale(1)" } },
+        "fade-in-right": { "0%": { opacity: "0", transform: "translateX(40px) scale(0.95)" }, "100%": { opacity: "1", transform: "translateX(0) scale(1)" } },
+        "slide-up": { "0%": { transform: "translateY(100%)" }, "100%": { transform: "translateY(0)" } },
+        "zoom-in": { "0%": { opacity: "0", transform: "scale(0.8) rotate(-3deg)" }, "100%": { opacity: "1", transform: "scale(1) rotate(0deg)" } },
+        "glow-pulse": { "0%, 100%": { boxShadow: "0 0 20px hsl(var(--accent) / 0.3)" }, "50%": { boxShadow: "0 0 40px hsl(var(--accent) / 0.6), 0 0 60px hsl(var(--accent) / 0.3)" } },
+        float: { "0%, 100%": { transform: "translateY(0px)" }, "50%": { transform: "translateY(-10px)" } },
+        shimmer: { "0%": { transform: "translateX(-100%)" }, "100%": { transform: "translateX(100%)" } },
+        morph: { "0%, 100%": { borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%" }, "50%": { borderRadius: "30% 60% 70% 40% / 50% 60% 30% 60%" } },
+        "text-focus": { "0%": { filter: "blur(12px)", opacity: "0" }, "100%": { filter: "blur(0px)", opacity: "1" } },
+        "bounce-in": { "0%": { transform: "scale(0.3)", opacity: "0" }, "50%": { transform: "scale(1.05)", opacity: "0.5" }, "70%": { transform: "scale(0.9)", opacity: "0.7" }, "100%": { transform: "scale(1)", opacity: "1" } },
+        "pulse-glow": {
+        "0%, 100%": { transform: "scale(1)", textShadow: "0 0 8px rgba(255,255,255,0.3)" },
+        "50%": { transform: "scale(1.03)", textShadow: "0 0 20px rgba(255,255,255,0.6)" },
+         },
       },
       animation: {
+        "pulse-glow": "pulse-glow 3s ease-in-out infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in-up": "fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards",
@@ -154,13 +121,15 @@ export default {
         "slide-up": "slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
         "zoom-in": "zoom-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards",
         "glow-pulse": "glow-pulse 2s ease-in-out infinite",
-        "float": "float 3s ease-in-out infinite",
-        "shimmer": "shimmer 2s infinite",
-        "morph": "morph 8s ease-in-out infinite",
+        float: "float 3s ease-in-out infinite",
+        shimmer: "shimmer 2s infinite",
+        morph: "morph 8s ease-in-out infinite",
         "text-focus": "text-focus 1.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards",
-        "bounce-in": "bounce-in 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards"
+        "bounce-in": "bounce-in 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+  plugins: [tailwindAnimate],
+};
+
+export default config;

@@ -6,76 +6,65 @@ import { useScrollAnimation, useParallax } from "@/hooks/useScrollAnimation";
 const Hero = () => {
   const { ref: heroRef, isVisible } = useScrollAnimation(0.2);
   const { ref: bgRef, offset } = useParallax(0.3);
-  
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (element) element.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section 
+    <section
       ref={heroRef as any}
-      id="inicio" 
+      id="inicio"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background Image with Parallax */}
-      <div 
+      {/* Background Image */}
+      <div
         ref={bgRef as any}
         className="absolute inset-0 bg-cover bg-center bg-no-repeat parallax-bg scale-110"
-        style={{ 
-          backgroundImage: `url(${heroImage})`,
-          transform: `translateY(${offset * 0.5}px)`
-        }}
+        style={{ backgroundImage: `url(${heroImage})`, transform: `translateY(${offset * 0.5}px)` }}
       >
         <div className="absolute inset-0 bg-gradient-hero"></div>
-        {/* Animated overlay particles */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-20 w-2 h-2 bg-accent/30 rounded-full animate-float"></div>
-          <div className="absolute top-40 right-32 w-1 h-1 bg-secondary/40 rounded-full animate-float stagger-2"></div>
-          <div className="absolute bottom-32 left-16 w-3 h-3 bg-accent/20 rounded-full animate-float stagger-3"></div>
-          <div className="absolute bottom-20 right-20 w-1.5 h-1.5 bg-primary-glow/30 rounded-full animate-float stagger-4"></div>
-        </div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center text-primary-foreground">
           {/* Main Heading */}
-          <div className={`mb-6 transition-all duration-1200 ${isVisible ? 'animate-text-focus' : 'opacity-0'}`}>
-            <h1 className="font-heading font-bold text-5xl md:text-7xl lg:text-8xl mb-4 leading-tight text-shimmer">
-              JEMEX
-              <span className="block text-3xl md:text-4xl lg:text-5xl font-medium text-accent mt-2 animate-glow-pulse">
+          <div className={`mb-6 transition-all duration-1200 ${isVisible ? "opacity-100" : "opacity-0"}`}>
+            <h1 className="font-heading font-bold text-5xl md:text-7xl lg:text-8xl mb-4 leading-tight relative">
+              <span
+                className="block text-primary-foreground animate-pulse-glow"
+                style={{ textShadow: "0 0 8px rgba(255,255,255,0.3)" }}
+              >
+                JEMEX
+              </span>
+              <span
+                className="block text-3xl md:text-4xl lg:text-5xl font-medium text-accent mt-2 animate-pulse-glow"
+                style={{ textShadow: "0 0 8px rgba(255,255,255,0.3)" }}
+              >
                 COMMERCE
               </span>
             </h1>
-            <div className={`w-24 h-1 bg-accent mx-auto mb-6 transition-all duration-1000 ${isVisible ? 'w-32 animate-shimmer' : 'w-0'}`}></div>
+            <div className={`w-24 h-1 bg-accent mx-auto mb-6 transition-all duration-1000 ${isVisible ? "w-32" : "w-0"}`}></div>
           </div>
 
           {/* Tagline */}
           <h2 className={`text-xl md:text-2xl lg:text-3xl font-medium mb-6 text-primary-foreground/90 transition-all duration-1000 delay-300 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
             Exportamos Calidad desde el Norte Argentino
           </h2>
-          
+
           <p className={`text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-500 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
             Donde la calidad y la seriedad abren mercados. Especializados en exportación de granos de alta calidad con trazabilidad garantizada desde el campo hasta su destino.
           </p>
 
           {/* CTA Buttons */}
           <div className={`flex flex-col sm:flex-row gap-4 justify-center mb-12 transition-all duration-1000 delay-700 ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
-            <Button 
-              onClick={() => scrollToSection('productos')}
-              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground text-lg px-8 py-6 shadow-elegant hover-lift hover-glow group"
-            >
+            <Button onClick={() => scrollToSection('productos')} className="bg-secondary hover:bg-secondary/90 text-secondary-foreground text-lg px-8 py-6 shadow-elegant hover-lift hover-glow group">
               Nuestros Productos 
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button 
-              onClick={() => scrollToSection('nosotros')}
-              variant="outline"
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary text-lg px-8 py-6 hover-lift glass"
-            >
+            <Button onClick={() => scrollToSection('nosotros')} variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary text-lg px-8 py-6 hover-lift glass">
               Conoce Más
             </Button>
           </div>
