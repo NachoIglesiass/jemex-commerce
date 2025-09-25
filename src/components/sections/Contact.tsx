@@ -242,24 +242,6 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="mt-16 text-center bg-gradient-primary rounded-2xl p-8 md:p-12 text-primary-foreground">
-          <h3 className="font-heading font-bold text-2xl md:text-3xl mb-4">
-            ¿Listo para Exportar Calidad?
-          </h3>
-          <p className="text-lg text-primary-foreground/90 mb-6 max-w-2xl mx-auto">
-            Conecta con nosotros y descubre cómo podemos ayudarte con granos de alta calidad desde el norte argentino.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              onClick={() => window.open('mailto:jemex.commerce@gmail.com', '_blank')}
-              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground"
-            >
-              <Mail className="w-5 h-5 mr-2" />
-              Contacto Directo
-            </Button>
-          </div>
-        </div>
       </div>
     </section>
   );

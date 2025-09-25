@@ -31,16 +31,16 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center text-primary-foreground">
           {/* Main Heading */}
-          <div className={`mb-6 transition-all duration-1200 ${isVisible ? "opacity-100" : "opacity-0"}`}>
+          <div className={`mb-6 transition-all duration-1200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             <h1 className="font-heading font-bold text-5xl md:text-7xl lg:text-8xl mb-4 leading-tight relative">
               <span
-                className="block text-primary-foreground animate-pulse-glow"
-                style={{ textShadow: "0 0 8px rgba(255,255,255,0.3)" }}
+                className="block text-primary-foreground"
+                style={{ textShadow: "0 0 12px rgba(255,255,255,0.4)" }}
               >
                 JEMEX
               </span>
               <span
-                className="block text-3xl md:text-4xl lg:text-5xl font-medium text-accent mt-2 animate-pulse-glow"
+                className="block text-3xl md:text-4xl lg:text-5xl font-medium text-accent mt-2"
                 style={{ textShadow: "0 0 8px rgba(255,255,255,0.3)" }}
               >
                 COMMERCE
@@ -70,29 +70,29 @@ const Hero = () => {
           </div>
 
           {/* Key Features */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto">
             <div className={`flex flex-col items-center text-center transition-all duration-1000 delay-900 hover-lift ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
-              <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mb-4 animate-morph hover-glow">
-                <Leaf className="h-8 w-8 text-secondary animate-float" />
+              <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mb-4 hover-glow">
+                <Leaf className="h-8 w-8 text-secondary" />
               </div>
               <h3 className="font-semibold text-lg mb-2">Calidad Premium</h3>
-              <p className="text-primary-foreground/70">Granos cuidadosamente seleccionados</p>
+              <p className="text-primary-foreground/70 text-sm md:text-base">Granos cuidadosamente seleccionados</p>
             </div>
             
             <div className={`flex flex-col items-center text-center transition-all duration-1000 delay-1000 hover-lift ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
-              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mb-4 animate-morph hover-glow stagger-2">
-                <Globe className="h-8 w-8 text-accent animate-float stagger-2" />
+              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mb-4 hover-glow">
+                <Globe className="h-8 w-8 text-accent" />
               </div>
               <h3 className="font-semibold text-lg mb-2">Exportación Global</h3>
-              <p className="text-primary-foreground/70">Presencia en Latinoamérica y el mundo</p>
+              <p className="text-primary-foreground/70 text-sm md:text-base">Presencia en Latinoamérica y el mundo</p>
             </div>
             
             <div className={`flex flex-col items-center text-center transition-all duration-1000 delay-1100 hover-lift ${isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
-              <div className="w-16 h-16 bg-primary-glow/20 rounded-full flex items-center justify-center mb-4 animate-morph hover-glow stagger-3">
-                <Award className="h-8 w-8 text-primary-glow animate-float stagger-3" />
+              <div className="w-16 h-16 bg-primary-glow/20 rounded-full flex items-center justify-center mb-4 hover-glow">
+                <Award className="h-8 w-8 text-primary-glow" />
               </div>
               <h3 className="font-semibold text-lg mb-2">Trazabilidad Total</h3>
-              <p className="text-primary-foreground/70">Desde el origen hasta el destino</p>
+              <p className="text-primary-foreground/70 text-sm md:text-base">Desde el origen hasta el destino</p>
             </div>
           </div>
         </div>

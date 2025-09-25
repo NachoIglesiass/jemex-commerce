@@ -20,13 +20,6 @@ const Gallery = () => {
 
   return (
     <section id="galeria" className="py-20 bg-earth-light relative overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-16 left-8 w-36 h-36 bg-primary rounded-full animate-float"></div>
-        <div className="absolute bottom-24 right-12 w-28 h-28 bg-accent rounded-full animate-float stagger-2"></div>
-        <div className="absolute top-1/3 right-1/4 w-20 h-20 bg-secondary rounded-full animate-float stagger-3"></div>
-      </div>
-
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div ref={headerRef as any} className="text-center mb-16">
@@ -56,14 +49,9 @@ const Gallery = () => {
 
                 {/* Category Badge */}
                 <div className="absolute top-4 left-4">
-                  <Badge className="bg-secondary text-secondary-foreground hover-glow animate-bounce-in">
+                  <Badge className="bg-secondary text-secondary-foreground">
                     {image.category}
                   </Badge>
-                </div>
-
-                {/* Floating animation elements */}
-                <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="w-2 h-2 bg-accent/60 rounded-full animate-float"></div>
                 </div>
               </div>
 

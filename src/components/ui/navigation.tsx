@@ -70,25 +70,27 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         <div className={cn(
-          "md:hidden transition-all duration-300 ease-in-out overflow-hidden",
-          isOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
+          "md:hidden transition-all duration-300 ease-in-out overflow-hidden bg-background/95 backdrop-blur-sm border-t border-border",
+          isOpen ? "max-h-80 opacity-100 pb-4" : "max-h-0 opacity-0"
         )}>
-          <div className="py-4 space-y-4">
+          <div className="py-4 space-y-3">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left text-foreground hover:text-primary transition-colors duration-200 font-medium py-2"
+                className="block w-full text-left text-foreground hover:text-primary transition-colors duration-200 font-medium py-3 px-4 hover:bg-primary/5 rounded-md"
               >
                 {item.label}
               </button>
             ))}
-            <Button 
-              onClick={() => scrollToSection('contacto')}
-              className="w-full bg-gradient-primary hover:opacity-90 transition-opacity mt-4"
-            >
-              Contactanos
-            </Button>
+            <div className="px-4 pt-2">
+              <Button 
+                onClick={() => scrollToSection('contacto')}
+                className="w-full bg-gradient-primary hover:opacity-90 transition-opacity"
+              >
+                Contactanos
+              </Button>
+            </div>
           </div>
         </div>
       </div>
