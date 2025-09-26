@@ -21,7 +21,7 @@ const Footer = () => {
             <div className="flex justify-center md:justify-start items-center space-x-2 text-accent">
               <Leaf className="h-5 w-5" />
               <span className="text-sm font-medium">
-                Calidad y Seriedad desde 2008
+                Calidad y Seriedad desde 2025
               </span>
             </div>
           </div>

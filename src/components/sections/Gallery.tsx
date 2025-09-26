@@ -72,8 +72,8 @@ const Gallery = () => {
         <div ref={statsRef as any} className={`mt-20 bg-gradient-primary rounded-2xl p-8 md:p-12 hover-lift hover-glow glass transition-all duration-1000 ${statsVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-primary-foreground">
             <div className={`transition-all duration-500 hover-lift ${statsVisible ? 'animate-fade-in-up stagger-1' : 'opacity-0'}`}>
-              <div className="text-4xl md:text-5xl font-bold text-accent mb-2 animate-glow-pulse">15+</div>
-              <div className="text-lg font-medium">Años de Experiencia</div>
+              <div className="text-4xl md:text-5xl font-bold text-accent mb-2 animate-glow-pulse">2+</div>
+              <div className="text-lg font-medium">Meses de Experiencia</div>
               <div className="text-primary-foreground/80 text-sm mt-1">En el sector agroexportador</div>
             </div>
 
