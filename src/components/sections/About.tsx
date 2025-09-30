@@ -19,24 +19,24 @@ const About = () => {
 
   const values = [
     {
-      icon: Plane,
-      title: "Trazabilidad",
-      description: "Desde el origen hasta el destino"
+      icon: Heart,
+      title: "Compromiso",
+      description: "Nos involucramos en cada etapa, cumpliendo lo que prometemos y construyendo relaciones sostenibles"
+    },
+    {
+      icon: Target,
+      title: "Calidad",
+      description: "Productos que cumplen altos estándares, asegurando trazabilidad y excelencia en cada entrega"
     },
     {
       icon: Handshake,
-      title: "Relaciones Transparentes",
-      description: "Comerciales transparentes y duraderas"
+      title: "Transparencia",
+      description: "Vínculos comerciales basados en confianza mutua, comunicación clara y cumplimiento de compromisos"
     },
     {
-      icon: Globe2,
-      title: "Visión Integral",
-      description: "Del negocio agroexportador"
-    },
-    {
-      icon: TrendingUp,
-      title: "Expansión Global",
-      description: "Presencia estratégica en Latinoamérica"
+      icon: Users,
+      title: "Profesionalismo",
+      description: "Formación técnica y experiencia que permite abordar cada operación con visión estratégica"
     }
   ];
 
@@ -49,8 +49,8 @@ const About = () => {
             ¿Quiénes Somos?
           </h2>
           <div className="w-24 h-1 bg-secondary mx-auto mb-6"></div>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            JEMEX Commerce es una empresa argentina especializada en la exportación de granos de alta calidad, con base en Rosario de la Frontera, Salta.
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Somos fruto de la pasión compartida de profesionales del comercio exterior, la administración agropecuaria y la ingeniería agronómica en Rosario de la Frontera, Salta.
           </p>
         </div>
 
@@ -71,33 +71,36 @@ const About = () => {
           <div className="space-y-6">
             <div>
               <h3 className="font-heading font-semibold text-2xl text-primary mb-4">
-                Nuestra Historia
+                Nuestro Origen
               </h3>
               <p className="text-foreground leading-relaxed mb-4">
-                Nos enfocamos en ofrecer productos confiables, con trazabilidad garantizada, gestionados por un equipo profesional con experiencia en <strong>Comercio Exterior, Administración Agropecuaria e Ingeniería Agronómica</strong>.
+                Desde el corazón productivo del norte argentino asumimos un compromiso simple y contundente: <strong>llevar al mundo granos de calidad excepcional</strong>, cultivados con respeto por la tierra y acompañados por una trazabilidad transparente de principio a fin.
+              </p>
+              <p className="text-foreground leading-relaxed mb-4">
+                Creemos que cada operación es mucho más que un intercambio comercial; es un vínculo humano basado en la confianza, la seriedad y el cumplimiento de la palabra.
               </p>
               <p className="text-foreground leading-relaxed">
-                Nuestra ubicación estratégica en el norte argentino nos permite conectar de manera ágil y eficiente con distintos puntos del país y del extranjero, optimizando tiempos y costos.
+                Latinoamérica es nuestro punto de partida natural y estratégico, pero nuestra mirada es global. Estamos abiertos a nuevas alianzas que nos permitan crecer junto a quienes comparten nuestra visión de excelencia y desarrollo sustentable.
               </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Card className="border-secondary/20">
+              <Card className="border-secondary/20 hover:shadow-soft transition-shadow">
                 <CardContent className="p-6 text-center">
                   <Target className="h-12 w-12 text-secondary mx-auto mb-3" />
                   <h4 className="font-semibold text-lg mb-2">Misión</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Llevar al mundo lo mejor de la producción agroalimentaria del norte argentino
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Ofrecer granos de alta calidad al mercado nacional e internacional, con fuerte compromiso con la excelencia, la trazabilidad y el cumplimiento
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="border-secondary/20">
+              <Card className="border-secondary/20 hover:shadow-soft transition-shadow">
                 <CardContent className="p-6 text-center">
                   <Eye className="h-12 w-12 text-secondary mx-auto mb-3" />
-                  <h4 className="font-semibold text-lg mb-2">Visión</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Garantizar excelencia en cada etapa: cultivo, cosecha, control y entrega
+                  <h4 className="font-semibold text-lg mb-2">Filosofía</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    La calidad no termina en el producto, sino en la forma de hacer las cosas
                   </p>
                 </CardContent>
               </Card>
@@ -108,7 +111,7 @@ const About = () => {
         {/* Values Section */}
         <div className="mb-12">
           <h3 className="font-heading font-semibold text-3xl text-center text-primary mb-12">
-            Nuestra Propuesta de Valor
+            Nuestros Valores
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -127,20 +130,20 @@ const About = () => {
         </div>
 
         {/* Commitment */}
-        <div className="bg-gradient-primary rounded-2xl p-8 md:p-12 text-center text-primary-foreground">
-          <Heart className="h-16 w-16 text-accent mx-auto mb-6" />
+        <div className="bg-gradient-primary rounded-2xl p-8 md:p-12 text-center text-primary-foreground shadow-elegant">
+          <Heart className="h-16 w-16 text-secondary mx-auto mb-6" />
           <h3 className="font-heading font-bold text-2xl md:text-3xl mb-4">
             Nuestro Compromiso
           </h3>
-          <p className="text-lg md:text-xl mb-6 text-primary-foreground/90 max-w-3xl mx-auto">
-            Apostamos a relaciones comerciales transparentes y sustentables, basadas en la confianza, el respeto y el cumplimiento de los compromisos asumidos.
+          <p className="text-lg md:text-xl mb-6 text-primary-foreground max-w-3xl mx-auto leading-relaxed">
+            Construir relaciones comerciales sólidas, transparentes y duraderas, aportando valor desde el origen hasta el destino final, y actuando con responsabilidad en cada etapa del proceso.
           </p>
-          <p className="text-primary-foreground/80 mb-8">
-            Estamos comprometidos con la sustentabilidad, la innovación y el desarrollo de vínculos comerciales duraderos que beneficien a todos los actores de la cadena de valor.
+          <p className="text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+            Trabajamos con la convicción de que la calidad se cultiva, la reputación se construye paso a paso y el futuro se cosecha cuando la responsabilidad guía cada decisión.
           </p>
           <Button 
             onClick={() => scrollToSection('productos')}
-            className="bg-secondary hover:bg-secondary/90 text-secondary-foreground"
+            className="bg-secondary hover:bg-secondary/90 text-secondary-foreground shadow-soft hover:shadow-elegant transition-all"
           >
             Conoce Nuestros Productos
           </Button>

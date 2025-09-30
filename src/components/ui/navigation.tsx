@@ -27,10 +27,10 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="font-heading font-bold text-2xl text-primary">
+            <div className="font-logo font-bold text-3xl text-primary tracking-wider">
               JEMEX
             </div>
-            <div className="text-sm text-muted-foreground font-medium tracking-wider">
+            <div className="text-xs text-muted-foreground font-sans font-normal tracking-[0.3em] uppercase">
               COMMERCE
             </div>
           </div>
