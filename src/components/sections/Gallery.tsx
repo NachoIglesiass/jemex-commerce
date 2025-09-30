@@ -1,21 +1,38 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import heroImage from "@/assets/hero-agriculture.jpg";
-import workerImage from "@/assets/worker-field.jpg";
+import campo1 from "@/assets/campo1.jpeg";
+import campo2 from "@/assets/campo2.jpg";
+import campo3 from "@/assets/campo3.jpg";
 import grainsImage from "@/assets/grains-macro.jpg";
-import facilityImage from "@/assets/facility.jpg";
+import granos2 from "@/assets/granos2.jpg";
+import granos3 from "@/assets/granos3.jpg";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const Gallery = () => {
   const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation(0.2);
   const { ref: galleryRef, isVisible: galleryVisible } = useScrollAnimation(0.1);
   const { ref: statsRef, isVisible: statsVisible } = useScrollAnimation(0.2);
 
-  const galleryImages = [
-    { src: heroImage, title: "Campos de Cultivo", description: "Extensos campos de soja en el norte argentino durante la hora dorada", category: "Cultivos" },
-    { src: workerImage, title: "Control de Calidad", description: "Inspección profesional de plantas en el campo para garantizar la calidad", category: "Proceso" },
-    { src: grainsImage, title: "Productos Premium", description: "Granos de alta calidad: soja, maíz, poroto y garbanzo", category: "Productos" },
-    { src: facilityImage, title: "Infraestructura", description: "Modernas instalaciones de almacenamiento y procesamiento", category: "Instalaciones" }
+  const galleryCollections = [
+    { 
+      title: "Campos de Cultivo", 
+      description: "Extensos campos de cultivo en el norte argentino", 
+      category: "Cultivos",
+      images: [campo1, campo2, campo3]
+    },
+    { 
+      title: "Productos Premium", 
+      description: "Granos de alta calidad: soja, maíz, poroto y garbanzo", 
+      category: "Productos",
+      images: [grainsImage, granos2, granos3]
+    }
   ];
 
   return (
@@ -34,34 +51,51 @@ const Gallery = () => {
 
         {/* Gallery Grid */}
         <div ref={galleryRef as any} className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {galleryImages.map((image, index) => (
+          {galleryCollections.map((collection, index) => (
             <Card
               key={index}
               className={`group overflow-hidden hover:shadow-elegant transition-all duration-500 border-secondary/20 hover-lift hover-glow ${galleryVisible ? `animate-fade-in-up stagger-${index + 1}` : 'opacity-0 translate-y-8'}`}
             >
               <div className="relative overflow-hidden">
-                <img
-                  src={image.src}
-                  alt={image.description}
-                  className="w-full h-64 md:h-80 object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                <Carousel
+                  opts={{
+                    align: "start",
+                    loop: true,
+                  }}
+                  plugins={[
+                    Autoplay({
+                      delay: 3000,
+                    }),
+                  ]}
+                >
+                  <CarouselContent>
+                    {collection.images.map((image, imgIndex) => (
+                      <CarouselItem key={imgIndex}>
+                        <img
+                          src={image}
+                          alt={`${collection.description} - imagen ${imgIndex + 1}`}
+                          className="w-full h-64 md:h-80 object-cover"
+                        />
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                </Carousel>
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none"></div>
 
                 {/* Category Badge */}
-                <div className="absolute top-4 left-4">
+                <div className="absolute top-4 left-4 z-10">
                   <Badge className="bg-secondary text-secondary-foreground">
-                    {image.category}
+                    {collection.category}
                   </Badge>
                 </div>
               </div>
 
               <CardContent className="p-6">
-                {/* Aquí quitamos text-shimmer para que el título no se mueva constantemente */}
                 <h3 className={`font-heading font-semibold text-xl text-primary mb-2 ${galleryVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-4'}`}>
-                  {image.title}
+                  {collection.title}
                 </h3>
                 <p className={`text-muted-foreground ${galleryVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-4'}`}>
-                  {image.description}
+                  {collection.description}
                 </p>
               </CardContent>
             </Card>

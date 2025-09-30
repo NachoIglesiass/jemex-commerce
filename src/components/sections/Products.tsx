@@ -2,8 +2,16 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Wheat, CheckCircle, Star, Sparkles } from "lucide-react";
-import grainsImage from "@/assets/grains-macro.jpg";
+import poroto1 from "@/assets/poroto1.jpg";
+import poroto2 from "@/assets/poroto2.jpg";
+import poroto3 from "@/assets/poroto3.jpg";
 import { useScrollAnimation, useMagneticHover } from "@/hooks/useScrollAnimation";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const Products = () => {
   const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation(0.2);
@@ -131,15 +139,45 @@ const Products = () => {
 
         {/* Quality Section */}
         <div ref={qualityRef as any} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Image */}
+          {/* Image Carousel - Poroto */}
           <div className={`relative transition-all duration-1000 ${qualityVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
             <div className="relative overflow-hidden rounded-2xl shadow-elegant hover-lift">
-              <img
-                src={grainsImage}
-                alt="Granos de alta calidad - soja, maíz, poroto y garbanzo"
-                className="w-full h-[400px] object-cover transition-transform duration-700 hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                plugins={[
+                  Autoplay({
+                    delay: 3500,
+                  }),
+                ]}
+              >
+                <CarouselContent>
+                  <CarouselItem>
+                    <img
+                      src={poroto1}
+                      alt="Poroto - Nuestro producto estrella de alta calidad"
+                      className="w-full h-[400px] object-cover"
+                    />
+                  </CarouselItem>
+                  <CarouselItem>
+                    <img
+                      src={poroto2}
+                      alt="Poroto blanco premium de calidad excepcional"
+                      className="w-full h-[400px] object-cover"
+                    />
+                  </CarouselItem>
+                  <CarouselItem>
+                    <img
+                      src={poroto3}
+                      alt="Poroto rojo de alta calidad para exportación"
+                      className="w-full h-[400px] object-cover"
+                    />
+                  </CarouselItem>
+                </CarouselContent>
+              </Carousel>
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent pointer-events-none"></div>
             </div>
           </div>
 

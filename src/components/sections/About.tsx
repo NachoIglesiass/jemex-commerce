@@ -105,24 +105,57 @@ const About = () => {
           </div>
         </div>
 
-        {/* Values Section */}
+        {/* Misión, Visión y Valores Section */}
         <div className="mb-12">
           <h3 className="font-heading font-semibold text-3xl text-center text-primary mb-12">
-            Nuestros Valores
+            Misión, Visión y Valores
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((value, index) => (
-              <Card key={index} className="text-center hover:shadow-soft transition-shadow duration-300 border-secondary/20">
-                <CardContent className="p-6">
-                  <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <value.icon className="h-8 w-8 text-secondary" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <Card className="text-center hover:shadow-soft transition-shadow duration-300 border-secondary/20">
+              <CardContent className="p-6">
+                <Target className="h-12 w-12 text-secondary mx-auto mb-4" />
+                <h4 className="font-semibold text-xl mb-3 text-primary">Misión</h4>
+                <p className="text-muted-foreground">
+                  Llevar al mundo lo mejor de la producción agroalimentaria argentina, conectando el norte del país con mercados globales mediante granos de alta calidad y servicios confiables.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-soft transition-shadow duration-300 border-secondary/20">
+              <CardContent className="p-6">
+                <Eye className="h-12 w-12 text-secondary mx-auto mb-4" />
+                <h4 className="font-semibold text-xl mb-3 text-primary">Visión</h4>
+                <p className="text-muted-foreground">
+                  Ser referentes en el comercio agroexportador, reconocidos por nuestra excelencia en cada etapa: cultivo, cosecha, control y entrega, construyendo relaciones comerciales duraderas.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-soft transition-shadow duration-300 border-secondary/20">
+              <CardContent className="p-6">
+                <Heart className="h-12 w-12 text-secondary mx-auto mb-4" />
+                <h4 className="font-semibold text-xl mb-3 text-primary">Valores</h4>
+                <div className="text-left space-y-2">
+                  <div className="flex items-start">
+                    <CheckCircle2 className="h-4 w-4 text-secondary mr-2 mt-1 flex-shrink-0" />
+                    <p className="text-sm text-muted-foreground"><strong className="text-primary">Compromiso:</strong> Cumplimos lo que prometemos, en tiempo y forma</p>
                   </div>
-                  <h4 className="font-semibold text-lg mb-2 text-primary">{value.title}</h4>
-                  <p className="text-muted-foreground text-sm">{value.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+                  <div className="flex items-start">
+                    <Award className="h-4 w-4 text-secondary mr-2 mt-1 flex-shrink-0" />
+                    <p className="text-sm text-muted-foreground"><strong className="text-primary">Calidad:</strong> Excelencia en cada grano que exportamos</p>
+                  </div>
+                  <div className="flex items-start">
+                    <Shield className="h-4 w-4 text-secondary mr-2 mt-1 flex-shrink-0" />
+                    <p className="text-sm text-muted-foreground"><strong className="text-primary">Transparencia:</strong> Relaciones comerciales claras y honestas</p>
+                  </div>
+                  <div className="flex items-start">
+                    <CheckCircle2 className="h-4 w-4 text-secondary mr-2 mt-1 flex-shrink-0" />
+                    <p className="text-sm text-muted-foreground"><strong className="text-primary">Profesionalismo:</strong> Equipo experto en comercio y agronomía</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
 
