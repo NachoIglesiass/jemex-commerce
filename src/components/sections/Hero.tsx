@@ -66,7 +66,7 @@ const Hero = () => {
               isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-8"
             }`}
           >
-            Exportamos Calidad desde el Norte Argentino
+            Donde la calidad y la seriedad abren mercados
           </h2>
 
           <p
@@ -74,9 +74,7 @@ const Hero = () => {
               isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-8"
             }`}
           >
-            Donde la calidad y la seriedad abren mercados. Especializados en
-            exportación de granos de alta calidad con trazabilidad garantizada
-            desde el campo hasta su destino.
+            Exportamos granos de alta calidad desde el norte argentino, con trazabilidad garantizada en cada etapa. Trabajamos para que cada grano llegue en tiempo y forma, manteniendo su calidad desde el campo hasta el destino final.
           </p>
 
           {/* CTA Buttons */}

@@ -1,10 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -22,18 +31,32 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <nav className={cn(
+      "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+      isScrolled 
+        ? "bg-background/95 backdrop-blur-sm border-b border-border shadow-soft" 
+        : "bg-transparent backdrop-blur-md"
+    )}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="font-heading font-bold text-2xl text-primary">
+          <button 
+            onClick={() => scrollToSection('inicio')}
+            className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
+          >
+            <div className={cn(
+              "font-heading font-bold text-2xl transition-colors",
+              isScrolled ? "text-primary" : "text-primary-foreground"
+            )}>
               JEMEX
             </div>
-            <div className="text-sm text-muted-foreground font-medium tracking-wider">
+            <div className={cn(
+              "text-sm font-medium tracking-wider transition-colors",
+              isScrolled ? "text-muted-foreground" : "text-primary-foreground/80"
+            )}>
               COMMERCE
             </div>
-          </div>
+          </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -41,7 +64,10 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                className={cn(
+                  "hover:text-primary transition-colors duration-200 font-medium",
+                  isScrolled ? "text-foreground" : "text-primary-foreground"
+                )}
               >
                 {item.label}
               </button>
@@ -60,7 +86,10 @@ const Navigation = () => {
               variant="ghost"
               size="sm"
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2"
+              className={cn(
+                "p-2",
+                !isScrolled && "text-primary-foreground hover:text-primary-foreground/80"
+              )}
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -69,7 +98,8 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         <div className={cn(
-          "md:hidden transition-all duration-300 ease-in-out overflow-hidden bg-background/95 backdrop-blur-sm border-t border-border",
+          "md:hidden transition-all duration-300 ease-in-out overflow-hidden backdrop-blur-md border-t",
+          isScrolled ? "bg-background/95 border-border" : "bg-primary/30 border-primary-foreground/20",
           isOpen ? "max-h-80 opacity-100 pb-4" : "max-h-0 opacity-0"
         )}>
           <div className="py-4 space-y-3">
@@ -77,7 +107,10 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left text-foreground hover:text-primary transition-colors duration-200 font-medium py-3 px-4 hover:bg-primary/5 rounded-md"
+                className={cn(
+                  "block w-full text-left hover:text-primary transition-colors duration-200 font-medium py-3 px-4 hover:bg-primary/5 rounded-md",
+                  isScrolled ? "text-foreground" : "text-primary-foreground"
+                )}
               >
                 {item.label}
               </button>

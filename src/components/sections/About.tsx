@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Target, Eye, Heart, Users, Plane, Handshake, Globe2, TrendingUp } from "lucide-react";
+import { Target, Eye, Heart, Award, Shield, CheckCircle2, Users } from "lucide-react";
 import workerImage from "@/assets/worker-field.jpg";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -19,24 +19,24 @@ const About = () => {
 
   const values = [
     {
-      icon: Plane,
-      title: "Trazabilidad",
-      description: "Desde el origen hasta el destino"
+      icon: Heart,
+      title: "Compromiso",
+      description: "Cumplimos lo que prometemos, en tiempo y forma"
     },
     {
-      icon: Handshake,
-      title: "Relaciones Transparentes",
-      description: "Comerciales transparentes y duraderas"
+      icon: Award,
+      title: "Calidad",
+      description: "Excelencia en cada grano que exportamos"
     },
     {
-      icon: Globe2,
-      title: "Visión Integral",
-      description: "Del negocio agroexportador"
+      icon: Shield,
+      title: "Transparencia",
+      description: "Relaciones comerciales claras y honestas"
     },
     {
-      icon: TrendingUp,
-      title: "Expansión Global",
-      description: "Presencia estratégica en Latinoamérica"
+      icon: CheckCircle2,
+      title: "Profesionalismo",
+      description: "Equipo experto en comercio y agronomía"
     }
   ];
 
@@ -50,7 +50,7 @@ const About = () => {
           </h2>
           <div className="w-24 h-1 bg-secondary mx-auto mb-6"></div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            JEMEX Commerce es una empresa argentina especializada en la exportación de granos de alta calidad, con base en Rosario de la Frontera, Salta.
+            Empresa argentina especializada en la exportación de granos de alta calidad, con base en Rosario de la Frontera, Salta. Conectamos el norte argentino con el mundo.
           </p>
         </div>
 
@@ -71,13 +71,13 @@ const About = () => {
           <div className="space-y-6">
             <div>
               <h3 className="font-heading font-semibold text-2xl text-primary mb-4">
-                Nuestra Historia
+                Nuestra Filosofía
               </h3>
               <p className="text-foreground leading-relaxed mb-4">
-                Nos enfocamos en ofrecer productos confiables, con trazabilidad garantizada, gestionados por un equipo profesional con experiencia en <strong>Comercio Exterior, Administración Agropecuaria e Ingeniería Agronómica</strong>.
+                <em>"Donde la calidad y la seriedad abren mercados."</em> Nos enfocamos en ofrecer productos confiables, con trazabilidad garantizada, gestionados por un equipo profesional con experiencia en <strong>Comercio Exterior, Administración Agropecuaria e Ingeniería Agronómica</strong>.
               </p>
               <p className="text-foreground leading-relaxed">
-                Nuestra ubicación estratégica en el norte argentino nos permite conectar de manera ágil y eficiente con distintos puntos del país y del extranjero, optimizando tiempos y costos.
+                Nuestra ubicación estratégica en el norte argentino nos permite conectar de manera ágil y eficiente con distintos puntos del país y del extranjero, optimizando tiempos y costos logísticos.
               </p>
             </div>
 
@@ -87,7 +87,7 @@ const About = () => {
                   <Target className="h-12 w-12 text-secondary mx-auto mb-3" />
                   <h4 className="font-semibold text-lg mb-2">Misión</h4>
                   <p className="text-sm text-muted-foreground">
-                    Llevar al mundo lo mejor de la producción agroalimentaria del norte argentino
+                    Llevar al mundo lo mejor de la producción agroalimentaria argentina
                   </p>
                 </CardContent>
               </Card>
@@ -108,7 +108,7 @@ const About = () => {
         {/* Values Section */}
         <div className="mb-12">
           <h3 className="font-heading font-semibold text-3xl text-center text-primary mb-12">
-            Nuestra Propuesta de Valor
+            Nuestros Valores
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -128,15 +128,15 @@ const About = () => {
 
         {/* Commitment */}
         <div className="bg-gradient-primary rounded-2xl p-8 md:p-12 text-center text-primary-foreground">
-          <Heart className="h-16 w-16 text-accent mx-auto mb-6" />
+          <Users className="h-16 w-16 text-accent mx-auto mb-6" />
           <h3 className="font-heading font-bold text-2xl md:text-3xl mb-4">
             Nuestro Compromiso
           </h3>
           <p className="text-lg md:text-xl mb-6 text-primary-foreground/90 max-w-3xl mx-auto">
-            Apostamos a relaciones comerciales transparentes y sustentables, basadas en la confianza, el respeto y el cumplimiento de los compromisos asumidos.
+            Trabajamos para que cada grano llegue en tiempo y forma, manteniendo su calidad desde el campo hasta el destino final.
           </p>
           <p className="text-primary-foreground/80 mb-8">
-            Estamos comprometidos con la sustentabilidad, la innovación y el desarrollo de vínculos comerciales duraderos que beneficien a todos los actores de la cadena de valor.
+            Apostamos a relaciones comerciales transparentes y sustentables, basadas en la confianza, el respeto y el cumplimiento de nuestros compromisos. Promovemos vínculos duraderos que beneficien a toda la cadena de valor.
           </p>
           <Button 
             onClick={() => scrollToSection('productos')}
