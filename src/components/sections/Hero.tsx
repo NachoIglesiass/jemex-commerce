@@ -60,21 +60,21 @@ const Hero = () => {
             ></div>
           </div>
 
-          {/* Tagline */}
+         {/* Tagline */}
           <h2
-            className={`text-xl md:text-2xl lg:text-3xl font-medium mb-6 text-primary-foreground/90 transition-all duration-1000 delay-300 ${
+            className={`text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-primary-foreground transition-all duration-1000 delay-300 ${
               isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-8"
             }`}
           >
-            Donde la calidad y la seriedad abren mercados
+            Sembrar con responsabilidad, cosechar con compromiso
           </h2>
 
           <p
-            className={`text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-500 ${
+            className={`text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-500 ${
               isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-8"
             }`}
           >
-            Exportamos granos de alta calidad desde el norte argentino, con trazabilidad garantizada en cada etapa. Trabajamos para que cada grano llegue en tiempo y forma, manteniendo su calidad desde el campo hasta el destino final.
+            Desde Rosario de la Frontera, Salta, llevamos al mundo granos de calidad excepcional, cultivados con respeto por la tierra y acompañados por una trazabilidad transparente de principio a fin.
           </p>
 
           {/* CTA Buttons */}
