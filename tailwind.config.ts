@@ -89,7 +89,6 @@ const config: Config = {
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
         heading: ["Plus Jakarta Sans", "Inter", "system-ui", "sans-serif"],
-        logo: ["Bebas Neue", "Plus Jakarta Sans", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {

@@ -35,20 +35,26 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center text-primary-foreground">
           {/* Main Heading */}
           <div
-            className={`mb-8 transition-all duration-1000 ${
+            className={`mb-6 transition-all duration-1200 ${
               isVisible ? "opacity-100" : "opacity-0"
             }`}
           >
-            <h1 className="font-logo font-bold text-6xl md:text-8xl lg:text-9xl mb-2 leading-none tracking-wider">
-              <span className="block text-primary-foreground drop-shadow-2xl">
+            <h1 className="font-heading font-bold text-5xl md:text-7xl lg:text-8xl mb-4 leading-tight relative">
+              <span
+                className="block text-primary-foreground animate-pulse-glow"
+                style={{ textShadow: "0 0 8px rgba(255,255,255,0.3)" }}
+              >
                 JEMEX
               </span>
+              <span
+                className="block text-3xl md:text-4xl lg:text-5xl font-medium text-accent mt-2 animate-pulse-glow"
+                style={{ textShadow: "0 0 8px rgba(255,255,255,0.3)" }}
+              >
+                COMMERCE
+              </span>
             </h1>
-            <p className="text-lg md:text-xl lg:text-2xl font-sans tracking-[0.3em] text-primary-foreground/90 uppercase">
-              COMMERCE
-            </p>
             <div
-              className={`w-24 h-1 bg-secondary mx-auto mt-6 transition-all duration-1000 ${
+              className={`w-24 h-1 bg-accent mx-auto mb-6 transition-all duration-1000 ${
                 isVisible ? "w-32" : "w-0"
               }`}
             ></div>
@@ -56,19 +62,21 @@ const Hero = () => {
 
           {/* Tagline */}
           <h2
-            className={`text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-primary-foreground transition-all duration-1000 delay-300 ${
+            className={`text-xl md:text-2xl lg:text-3xl font-medium mb-6 text-primary-foreground/90 transition-all duration-1000 delay-300 ${
               isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-8"
             }`}
           >
-            Sembrar con responsabilidad, cosechar con compromiso
+            Exportamos Calidad desde el Norte Argentino
           </h2>
 
           <p
-            className={`text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-500 ${
+            className={`text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-500 ${
               isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-8"
             }`}
           >
-            Desde Rosario de la Frontera, Salta, llevamos al mundo granos de calidad excepcional, cultivados con respeto por la tierra y acompañados por una trazabilidad transparente de principio a fin.
+            Donde la calidad y la seriedad abren mercados. Especializados en
+            exportación de granos de alta calidad con trazabilidad garantizada
+            desde el campo hasta su destino.
           </p>
 
           {/* CTA Buttons */}
@@ -102,12 +110,12 @@ const Hero = () => {
                   : "opacity-0 translate-y-8"
               }`}
             >
-              <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mb-4 hover-glow">
-                <Leaf className="h-8 w-8 text-secondary" />
+              <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mb-4 animate-morph hover-glow">
+                <Leaf className="h-8 w-8 text-secondary animate-float" />
               </div>
-              <h3 className="font-semibold text-lg mb-2 text-primary-foreground">Calidad</h3>
-              <p className="text-primary-foreground/80">
-                Productos que cumplen altos estándares con trazabilidad garantizada
+              <h3 className="font-semibold text-lg mb-2">Calidad Premium</h3>
+              <p className="text-primary-foreground/70">
+                Granos cuidadosamente seleccionados
               </p>
             </div>
 
@@ -118,12 +126,12 @@ const Hero = () => {
                   : "opacity-0 translate-y-8"
               }`}
             >
-              <div className="w-16 h-16 bg-primary-foreground/20 rounded-full flex items-center justify-center mb-4 hover-glow">
-                <Globe className="h-8 w-8 text-primary-foreground" />
+              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mb-4 animate-morph hover-glow stagger-2">
+                <Globe className="h-8 w-8 text-accent animate-float stagger-2" />
               </div>
-              <h3 className="font-semibold text-lg mb-2 text-primary-foreground">Transparencia</h3>
-              <p className="text-primary-foreground/80">
-                Vínculos comerciales basados en confianza y comunicación clara
+              <h3 className="font-semibold text-lg mb-2">Exportación Global</h3>
+              <p className="text-primary-foreground/70">
+                Presencia en Latinoamérica y el mundo
               </p>
             </div>
 
@@ -134,14 +142,14 @@ const Hero = () => {
                   : "opacity-0 translate-y-8"
               }`}
             >
-              <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mb-4 hover-glow">
-                <Award className="h-8 w-8 text-secondary" />
+              <div className="w-16 h-16 bg-primary-glow/20 rounded-full flex items-center justify-center mb-4 animate-morph hover-glow stagger-3">
+                <Award className="h-8 w-8 text-primary-glow animate-float stagger-3" />
               </div>
-              <h3 className="font-semibold text-lg mb-2 text-primary-foreground">
-                Profesionalismo
+              <h3 className="font-semibold text-lg mb-2">
+                Trazabilidad Total
               </h3>
-              <p className="text-primary-foreground/80">
-                Experiencia técnica con visión estratégica y eficiencia logística
+              <p className="text-primary-foreground/70">
+                Desde el origen hasta el destino
               </p>
             </div>
           </div>

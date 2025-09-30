@@ -22,15 +22,15 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="font-logo font-bold text-3xl text-primary-foreground tracking-wider">
+            <div className="font-heading font-bold text-2xl text-primary">
               JEMEX
             </div>
-            <div className="text-xs text-primary-foreground/80 font-sans font-normal tracking-[0.3em] uppercase">
+            <div className="text-sm text-muted-foreground font-medium tracking-wider">
               COMMERCE
             </div>
           </div>
@@ -41,7 +41,7 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-primary-foreground/90 hover:text-primary-foreground transition-colors duration-200 font-medium"
+                className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
               >
                 {item.label}
               </button>
@@ -60,7 +60,7 @@ const Navigation = () => {
               variant="ghost"
               size="sm"
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-primary-foreground hover:bg-primary-foreground/10"
+              className="p-2"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -69,7 +69,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         <div className={cn(
-          "md:hidden transition-all duration-300 ease-in-out overflow-hidden bg-primary/30 backdrop-blur-md",
+          "md:hidden transition-all duration-300 ease-in-out overflow-hidden bg-background/95 backdrop-blur-sm border-t border-border",
           isOpen ? "max-h-80 opacity-100 pb-4" : "max-h-0 opacity-0"
         )}>
           <div className="py-4 space-y-3">
@@ -77,7 +77,7 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left text-primary-foreground/90 hover:text-primary-foreground transition-colors duration-200 font-medium py-3 px-4 hover:bg-primary-foreground/10 rounded-md"
+                className="block w-full text-left text-foreground hover:text-primary transition-colors duration-200 font-medium py-3 px-4 hover:bg-primary/5 rounded-md"
               >
                 {item.label}
               </button>
