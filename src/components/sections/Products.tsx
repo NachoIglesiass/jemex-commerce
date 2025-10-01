@@ -10,6 +10,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -152,6 +154,7 @@ const Products = () => {
                     delay: 3500,
                   }),
                 ]}
+                className="w-full"
               >
                 <CarouselContent>
                   <CarouselItem>
@@ -176,6 +179,8 @@ const Products = () => {
                     />
                   </CarouselItem>
                 </CarouselContent>
+                <CarouselPrevious className="left-4 bg-background/80 hover:bg-background" />
+                <CarouselNext className="right-4 bg-background/80 hover:bg-background" />
               </Carousel>
               <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent pointer-events-none"></div>
             </div>

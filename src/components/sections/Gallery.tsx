@@ -12,13 +12,21 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { useState } from "react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Gallery = () => {
   const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation(0.2);
   const { ref: galleryRef, isVisible: galleryVisible } = useScrollAnimation(0.1);
-  const { ref: statsRef, isVisible: statsVisible } = useScrollAnimation(0.2);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentCollectionIndex, setCurrentCollectionIndex] = useState(0);
 
   const galleryCollections = [
     { 
@@ -34,6 +42,25 @@ const Gallery = () => {
       images: [grainsImage, granos2, granos3]
     }
   ];
+
+  const allImages = galleryCollections.flatMap(collection => collection.images);
+
+  const openModal = (collectionIndex: number, imageIndex: number) => {
+    setCurrentCollectionIndex(collectionIndex);
+    setCurrentImageIndex(imageIndex);
+    setIsModalOpen(true);
+  };
+
+  const navigateImage = (direction: 'prev' | 'next') => {
+    const currentCollection = galleryCollections[currentCollectionIndex];
+    const totalImages = currentCollection.images.length;
+    
+    if (direction === 'next') {
+      setCurrentImageIndex((prev) => (prev + 1) % totalImages);
+    } else {
+      setCurrentImageIndex((prev) => (prev - 1 + totalImages) % totalImages);
+    }
+  };
 
   return (
     <section id="galeria" className="py-20 bg-earth-light relative overflow-hidden">
@@ -67,6 +94,7 @@ const Gallery = () => {
                       delay: 3000,
                     }),
                   ]}
+                  className="w-full"
                 >
                   <CarouselContent>
                     {collection.images.map((image, imgIndex) => (
@@ -74,11 +102,14 @@ const Gallery = () => {
                         <img
                           src={image}
                           alt={`${collection.description} - imagen ${imgIndex + 1}`}
-                          className="w-full h-64 md:h-80 object-cover"
+                          className="w-full h-64 md:h-80 object-cover cursor-pointer"
+                          onClick={() => openModal(index, imgIndex)}
                         />
                       </CarouselItem>
                     ))}
                   </CarouselContent>
+                  <CarouselPrevious className="left-4 bg-background/80 hover:bg-background" />
+                  <CarouselNext className="right-4 bg-background/80 hover:bg-background" />
                 </Carousel>
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none"></div>
 
@@ -102,6 +133,50 @@ const Gallery = () => {
           ))}
         </div>
       </div>
+
+      {/* Fullscreen Modal */}
+      <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+        <DialogContent className="max-w-full h-screen p-0 bg-black/95 border-0">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="absolute top-4 right-4 z-50 text-white hover:bg-white/20"
+            onClick={() => setIsModalOpen(false)}
+          >
+            <X className="h-6 w-6" />
+          </Button>
+
+          <div className="relative w-full h-full flex items-center justify-center">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute left-4 z-50 text-white hover:bg-white/20 h-12 w-12"
+              onClick={() => navigateImage('prev')}
+            >
+              <ChevronLeft className="h-8 w-8" />
+            </Button>
+
+            <img
+              src={galleryCollections[currentCollectionIndex].images[currentImageIndex]}
+              alt={`${galleryCollections[currentCollectionIndex].description} - imagen ${currentImageIndex + 1}`}
+              className="max-w-full max-h-full object-contain p-4"
+            />
+
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute right-4 z-50 text-white hover:bg-white/20 h-12 w-12"
+              onClick={() => navigateImage('next')}
+            >
+              <ChevronRight className="h-8 w-8" />
+            </Button>
+
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm bg-black/50 px-4 py-2 rounded-full">
+              {currentImageIndex + 1} / {galleryCollections[currentCollectionIndex].images.length}
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
