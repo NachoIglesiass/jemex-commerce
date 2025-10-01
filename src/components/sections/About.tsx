@@ -80,36 +80,11 @@ const About = () => {
                 Nuestra ubicación estratégica en el norte argentino nos permite conectar de manera ágil y eficiente con distintos puntos del país y del extranjero, optimizando tiempos y costos logísticos.
               </p>
             </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Card className="border-secondary/20">
-                <CardContent className="p-6 text-center">
-                  <Target className="h-12 w-12 text-secondary mx-auto mb-3" />
-                  <h4 className="font-semibold text-lg mb-2">Misión</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Llevar al mundo lo mejor de la producción agroalimentaria argentina
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-secondary/20">
-                <CardContent className="p-6 text-center">
-                  <Eye className="h-12 w-12 text-secondary mx-auto mb-3" />
-                  <h4 className="font-semibold text-lg mb-2">Visión</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Garantizar excelencia en cada etapa: cultivo, cosecha, control y entrega
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
           </div>
         </div>
 
         {/* Misión, Visión y Valores Section */}
         <div className="mb-12">
-          <h3 className="font-heading font-semibold text-3xl text-center text-primary mb-12">
-            Misión, Visión y Valores
-          </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <Card className="text-center hover:shadow-soft transition-shadow duration-300 border-secondary/20">

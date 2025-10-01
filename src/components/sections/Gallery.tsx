@@ -101,29 +101,6 @@ const Gallery = () => {
             </Card>
           ))}
         </div>
-
-        {/* Stats Section */}
-        <div ref={statsRef as any} className={`mt-20 bg-gradient-primary rounded-2xl p-8 md:p-12 hover-lift hover-glow glass transition-all duration-1000 ${statsVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-primary-foreground">
-            <div className={`transition-all duration-500 hover-lift ${statsVisible ? 'animate-fade-in-up stagger-1' : 'opacity-0'}`}>
-              <div className="text-4xl md:text-5xl font-bold text-accent mb-2 animate-glow-pulse">2+</div>
-              <div className="text-lg font-medium">Meses de Experiencia</div>
-              <div className="text-primary-foreground/80 text-sm mt-1">En el sector agroexportador</div>
-            </div>
-
-            <div className={`transition-all duration-500 hover-lift ${statsVisible ? 'animate-fade-in-up stagger-2' : 'opacity-0'}`}>
-              <div className="text-4xl md:text-5xl font-bold text-accent mb-2 animate-glow-pulse stagger-2">4</div>
-              <div className="text-lg font-medium">Productos Principales</div>
-              <div className="text-primary-foreground/80 text-sm mt-1">Poroto, soja, maíz y garbanzo</div>
-            </div>
-
-            <div className={`transition-all duration-500 hover-lift ${statsVisible ? 'animate-fade-in-up stagger-3' : 'opacity-0'}`}>
-              <div className="text-4xl md:text-5xl font-bold text-accent mb-2 animate-glow-pulse stagger-3">100%</div>
-              <div className="text-lg font-medium">Trazabilidad</div>
-              <div className="text-primary-foreground/80 text-sm mt-1">Desde el campo hasta el destino</div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
