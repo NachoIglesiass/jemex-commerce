@@ -16,7 +16,7 @@ import {
   CarouselNext,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -137,6 +137,12 @@ const Gallery = () => {
       {/* Fullscreen Modal */}
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
         <DialogContent className="max-w-full h-screen p-0 bg-black/95 border-0">
+          <DialogTitle className="sr-only">
+            {galleryCollections[currentCollectionIndex]?.title}
+          </DialogTitle>
+          <DialogDescription className="sr-only">
+            {galleryCollections[currentCollectionIndex]?.description}
+          </DialogDescription>
           <Button
             variant="ghost"
             size="icon"
