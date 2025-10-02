@@ -4,7 +4,7 @@ import heroImage from "@/assets/hero-agriculture.jpg";
 import campo1 from "@/assets/campo1.jpeg";
 import campo2 from "@/assets/campo2.jpeg";
 import campo3 from "@/assets/campo3.jpeg";
-import grainsImage from "@/assets/grains-macro.jpg";
+import grainsImage from "@/assets/garbanzo.jpg";
 import granos2 from "@/assets/granos2.jpeg";
 import granos3 from "@/assets/granos3.jpeg";
 import granos4 from "@/assets/granos4.jpeg";
@@ -41,7 +41,7 @@ const Gallery = () => {
       title: "Productos Premium", 
       description: "Granos de alta calidad: soja, maíz, poroto y garbanzo", 
       category: "Productos",
-      images: [grainsImage, granos2, granos3, granos4, granos5]
+      images: [grainsImage, granos2, granos3, granos4, granos5 ]
     }
   ];
 
