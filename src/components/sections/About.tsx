@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Target, Eye, Heart, Award, Shield, CheckCircle2, Users } from "lucide-react";
-import workerImage from "@/assets/worker-field.jpg";
+import workerImage from "@/assets/worker-field.png";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 

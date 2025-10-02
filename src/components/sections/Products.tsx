@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Wheat, CheckCircle, Star, Sparkles } from "lucide-react";
 import poroto1 from "@/assets/poroto1.jpg";
-import poroto2 from "@/assets/poroto2.jpg";
+import poroto2 from "@/assets/poroto2.jpeg";
 import poroto3 from "@/assets/poroto3.jpg";
 import { useScrollAnimation, useMagneticHover } from "@/hooks/useScrollAnimation";
 import {
