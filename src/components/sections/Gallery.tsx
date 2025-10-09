@@ -138,7 +138,7 @@ const Gallery = () => {
 
       {/* Fullscreen Modal */}
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-        <DialogContent className="max-w-full h-screen p-0 bg-black/95 border-0">
+        <DialogContent hideClose className="max-w-full h-screen p-0 bg-black/95 border-0">
           <DialogTitle className="sr-only">
             {galleryCollections[currentCollectionIndex]?.title}
           </DialogTitle>
