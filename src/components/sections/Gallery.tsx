@@ -148,10 +148,10 @@ const Gallery = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="absolute top-2 right-2 md:top-4 md:right-4 z-[100] text-white hover:bg-white/20 bg-black/50 h-10 w-10 md:h-12 md:w-12"
+            className="fixed top-4 right-4 md:top-6 md:right-6 z-[100] text-white hover:bg-white/30 bg-black/70 h-12 w-12 md:h-14 md:w-14 rounded-full shadow-lg"
             onClick={() => setIsModalOpen(false)}
           >
-            <X className="h-5 w-5 md:h-6 md:w-6" />
+            <X className="h-6 w-6 md:h-7 md:w-7" />
           </Button>
 
           <div className="relative w-full h-full flex items-center justify-center">
