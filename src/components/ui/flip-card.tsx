@@ -25,12 +25,12 @@ const FlipCard = ({ icon, title, content, className }: FlipCardProps) => {
       >
         {/* Front */}
         <div
-          className="absolute inset-0 w-full h-full rounded-xl border border-secondary/30 bg-gradient-to-br from-card via-card to-secondary/5 shadow-lg transition-all duration-300 hover:scale-[1.02] flex flex-col items-center justify-center p-8"
+          className="absolute inset-0 w-full h-full rounded-xl border border-secondary/30 bg-gradient-to-br from-card via-card to-secondary/5 shadow-lg transition-all duration-300 flex flex-col items-center justify-center p-8"
           style={{
             backfaceVisibility: "hidden",
           }}
         >
-          <div className="mb-5 transform group-hover:scale-110 transition-transform duration-300">
+          <div className="mb-5">
             {icon}
           </div>
           <h4 className="font-heading font-bold text-2xl mb-8 text-primary text-center">
@@ -38,7 +38,7 @@ const FlipCard = ({ icon, title, content, className }: FlipCardProps) => {
           </h4>
           <button 
             onClick={() => setIsFlipped(true)}
-            className="px-8 py-3 text-sm font-semibold text-white bg-gradient-to-r from-secondary to-secondary/90 hover:from-secondary/90 hover:to-secondary rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
+            className="px-8 py-3 text-sm font-semibold text-white bg-gradient-to-r from-secondary to-secondary/90 hover:from-secondary/90 hover:to-secondary rounded-full shadow-md hover:shadow-lg transition-all duration-300"
           >
             Ver contenido
           </button>
