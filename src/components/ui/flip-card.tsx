@@ -72,7 +72,7 @@ const FlipCard = ({ icon, title, content, className }: FlipCardProps) => {
           {/* Botón Volver */}
           <button 
             onClick={() => setIsFlipped(false)}
-            className="mt-auto px-8 py-3 text-sm font-semibold text-white bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
+            className="mt-auto mb-2 px-8 py-3 text-sm font-semibold text-white bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
           >
             Volver
           </button>
