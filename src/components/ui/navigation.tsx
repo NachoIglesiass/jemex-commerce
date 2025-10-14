@@ -38,12 +38,12 @@ const Navigation = () => {
         ? "bg-background/95 backdrop-blur-sm border-b border-border shadow-soft" 
         : "bg-transparent backdrop-blur-[2px]"
     )}>
-      <div className="container mx-auto px-2 md:px-4">
-        <div className="flex items-center justify-between h-20 md:h-24">
+      <div className="w-full px-2 md:px-6">
+        <div className="flex items-center justify-between h-16 md:h-18">
           {/* Logo */}
           <button 
             onClick={() => scrollToSection('inicio')}
-            className="relative flex items-center group transition-all duration-300"
+            className="relative flex items-center group transition-all duration-300 -ml-1"
           >
             {/* Backdrop más corto y bien posicionado */}
             <div className="absolute inset-x-0 top-1 bottom-1 bg-background/50 backdrop-blur-sm rounded-md opacity-0 group-hover:opacity-100 transition-all duration-300 scale-95 group-hover:scale-105"></div>
@@ -51,7 +51,7 @@ const Navigation = () => {
             <img 
               src={logoJemex} 
               alt="Jemex Commerce Logo" 
-              className="relative h-16 md:h-20 lg:h-24 w-auto object-contain transition-all duration-300 drop-shadow-lg group-hover:scale-105 group-hover:brightness-110 group-hover:drop-shadow-xl"
+              className="relative h-14 md:h-16 lg:h-20 w-auto object-contain transition-all duration-300 drop-shadow-lg group-hover:scale-105 group-hover:brightness-110 group-hover:drop-shadow-xl"
             />
           </button>
 
