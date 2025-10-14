@@ -49,7 +49,7 @@ const Hero = () => {
               alt="Jemex Commerce" 
               className="h-48 md:h-64 lg:h-72 w-auto object-contain hover:scale-105 transition-all duration-700 ease-in-out"
               style={{ 
-                filter: 'brightness(1.3) contrast(1.2) drop-shadow(0 0 4px rgba(255,255,255,0.3)) drop-shadow(0 0 10px rgba(255,255,255,0.15))',
+                filter: 'brightness(1.3) contrast(1.2) drop-shadow(0 0 6px rgba(255,255,255,0.5)) drop-shadow(0 0 12px rgba(255,255,255,0.25))',
                 animation: 'float 6s ease-in-out infinite'
               }}
             />
