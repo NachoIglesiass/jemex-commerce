@@ -48,7 +48,7 @@ const Navigation = () => {
             <img 
               src={logoJemex} 
               alt="Jemex Commerce Logo" 
-              className="h-14 md:h-16 w-auto object-contain transition-all duration-300 drop-shadow-[0_0_8px_rgba(255,255,255,0.9)] drop-shadow-[0_0_4px_rgba(255,255,255,0.7)]"
+              className="h-16 md:h-20 w-auto object-contain transition-all duration-300 drop-shadow-[0_0_8px_rgba(255,255,255,0.9)] drop-shadow-[0_0_4px_rgba(255,255,255,0.7)]"
             />
           </button>
 
