@@ -43,10 +43,10 @@ const Navigation = () => {
           {/* Logo */}
           <button 
             onClick={() => scrollToSection('inicio')}
-            className="relative flex items-center group transition-all duration-300 py-2"
+            className="relative flex items-center group transition-all duration-300"
           >
-            {/* Backdrop más pequeño y contenido */}
-            <div className="absolute inset-0 bg-background/50 backdrop-blur-sm rounded-md opacity-0 group-hover:opacity-100 transition-all duration-300 scale-95 group-hover:scale-105"></div>
+            {/* Backdrop más corto y bien posicionado */}
+            <div className="absolute inset-x-0 top-1 bottom-1 bg-background/50 backdrop-blur-sm rounded-md opacity-0 group-hover:opacity-100 transition-all duration-300 scale-95 group-hover:scale-105"></div>
             
             <img 
               src={logoJemex} 
