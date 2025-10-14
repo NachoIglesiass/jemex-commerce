@@ -46,7 +46,7 @@ const FlipCard = ({ icon, title, content, className }: FlipCardProps) => {
 
         {/* Back */}
         <div
-          className="absolute inset-0 w-full h-full rounded-xl border border-primary/30 bg-gradient-to-br from-primary/10 via-card to-secondary/15 shadow-xl flex flex-col p-8"
+          className="absolute inset-0 w-full h-full rounded-xl border border-primary/30 bg-gradient-to-br from-primary/10 via-card to-secondary/15 shadow-xl flex flex-col p-6 pb-16 sm:p-8 sm:pb-10"
           style={{
             backfaceVisibility: "hidden",
             transform: "rotateY(180deg)",
@@ -72,7 +72,7 @@ const FlipCard = ({ icon, title, content, className }: FlipCardProps) => {
           {/* Botón Volver */}
           <button 
             onClick={() => setIsFlipped(false)}
-            className="mt-auto mb-2 px-8 py-3 text-sm font-semibold text-white bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
+            className="mt-auto mb-4 sm:mb-2 px-8 py-3 text-sm font-semibold text-white bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
           >
             Volver
           </button>

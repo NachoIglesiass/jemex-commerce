@@ -91,7 +91,7 @@ const Products = () => {
         </div>
 
         {/* Products Grid */}
-        <div ref={productsRef as any} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div ref={productsRef as any} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6 md:gap-8 lg:gap-10 mb-16">
           {/* Bean Variety Card - Interactive */}
           <div className={`${productsVisible ? 'opacity-100 translate-y-0 transition-all duration-700' : 'opacity-0 translate-y-8'}`}>
             <BeanVarietyCard />
