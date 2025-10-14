@@ -48,7 +48,7 @@ const Navigation = () => {
             <img 
               src={logoJemex} 
               alt="Jemex Commerce Logo" 
-              className="h-12 md:h-14 lg:h-16 w-auto object-contain transition-all duration-300 drop-shadow-lg hover:contrast-125 hover:brightness-110 hover:drop-shadow-2xl"
+              className="h-12 md:h-14 lg:h-16 w-auto object-contain contrast-125 brightness-110 drop-shadow-lg"
             />
           </button>
 
