@@ -48,8 +48,12 @@ const Navigation = () => {
             <img 
               src={logoJemex} 
               alt="Jemex Commerce Logo" 
-              className="h-16 md:h-20 lg:h-24 w-auto object-contain drop-shadow-lg transition-all duration-300 hover:scale-110"
-              style={{ filter: isScrolled ? 'brightness(1.3) contrast(1.3)' : 'brightness(0) invert(1)' }}
+              className="h-16 md:h-20 lg:h-24 w-auto object-contain transition-all duration-300 hover:scale-110"
+              style={{ 
+                filter: isScrolled 
+                  ? 'brightness(1.3) contrast(1.3) drop-shadow(0 2px 4px rgba(0,0,0,0.15))' 
+                  : 'brightness(0) invert(1) drop-shadow(0 2px 4px rgba(0,0,0,0.3))' 
+              }}
             />
           </button>
 
