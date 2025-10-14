@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Leaf, Globe, Award } from "lucide-react";
 import heroImage from "@/assets/hero-agriculture.jpg";
-import logoJemex from "@/assets/logo-jemex-clean.png";
 import { useScrollAnimation, useParallax } from "@/hooks/useScrollAnimation";
 
 const Hero = () => {
@@ -35,24 +34,8 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-20">
+      <div className="relative z-10 container mx-auto px-4 py-12 mt-8">
         <div className="max-w-4xl mx-auto text-center text-primary-foreground">
-
-          {/* Logo */}
-          <div
-            className={`flex justify-center mb-4 transition-all duration-1000 ${
-              isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-8"
-            }`}
-          >
-            <img 
-              src={logoJemex} 
-              alt="Jemex Commerce" 
-              className="h-48 md:h-64 lg:h-72 w-auto object-contain hover:scale-105 transition-all duration-700 ease-in-out"
-              style={{ 
-                animation: 'float 6s ease-in-out infinite'
-              }}
-            />
-          </div>
 
           {/* Tagline */}
           <h1
