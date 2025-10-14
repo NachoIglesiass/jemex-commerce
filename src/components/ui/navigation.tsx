@@ -48,10 +48,7 @@ const Navigation = () => {
             <img 
               src={logoJemex} 
               alt="Jemex Commerce Logo" 
-              className={cn(
-                "h-10 md:h-12 w-auto object-contain transition-all duration-300 drop-shadow-[0_2px_8px_rgba(255,255,255,0.8)]",
-                isScrolled ? "brightness-100" : "brightness-105"
-              )}
+              className="h-14 md:h-16 w-auto object-contain transition-all duration-300"
             />
           </button>
 
