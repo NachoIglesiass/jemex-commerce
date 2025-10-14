@@ -21,15 +21,16 @@ const Hero = () => {
       {/* Background Image */}
       <div
         ref={bgRef as any}
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat parallax-bg scale-110 saturate-75 brightness-105"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat parallax-bg scale-110"
         style={{
           backgroundImage: `url(${heroImage})`,
           transform: `translateY(${offset * 0.5}px)`,
+          filter: 'brightness(0.85) saturate(1.1)',
         }}
       >
         <div className="absolute inset-0 bg-gradient-hero"></div>
-        {/* Top light overlay to improve logo readability without visible contrast */}
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-24 md:h-28 bg-gradient-to-b from-background/70 via-background/40 to-transparent"></div>
+        {/* Subtle top overlay for navbar integration */}
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background/15 via-background/5 to-transparent"></div>
       </div>
 
       {/* Content */}

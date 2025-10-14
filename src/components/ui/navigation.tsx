@@ -36,7 +36,7 @@ const Navigation = () => {
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
       isScrolled 
         ? "bg-background/95 backdrop-blur-sm border-b border-border shadow-soft" 
-        : "bg-transparent backdrop-blur-md"
+        : "bg-transparent backdrop-blur-[2px]"
     )}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
