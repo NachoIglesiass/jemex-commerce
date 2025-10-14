@@ -6,6 +6,7 @@ import poroto1 from "@/assets/poroto1.jpg";
 import poroto2 from "@/assets/poroto2.jpeg";
 import poroto3 from "@/assets/poroto3.jpg";
 import { useScrollAnimation, useMagneticHover } from "@/hooks/useScrollAnimation";
+import { BeanVarietyCard } from "./BeanVarietyCard";
 import {
   Carousel,
   CarouselContent,
@@ -27,13 +28,6 @@ const Products = () => {
   };
 
   const products = [
-    {
-      name: "Poroto",
-      type: "Producto Insignia",
-      description: "Cultivado en condiciones óptimas y cuidadosamente seleccionado para asegurar calidad, sabor y valor nutricional excepcional.",
-      features: ["Calidad Premium", "Trazabilidad Completa", "Valor Nutricional Alto"],
-      highlight: true
-    },
     {
       name: "Soja",
       type: "Grano Premium",
@@ -92,6 +86,12 @@ const Products = () => {
 
         {/* Products Grid */}
         <div ref={productsRef as any} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {/* Bean Variety Card - Interactive */}
+          <div className={`${productsVisible ? 'opacity-100 translate-y-0 transition-all duration-700' : 'opacity-0 translate-y-8'}`}>
+            <BeanVarietyCard />
+          </div>
+          
+          {/* Other Products */}
           {products.map((product, index) => (
             <Card
             key={index}
