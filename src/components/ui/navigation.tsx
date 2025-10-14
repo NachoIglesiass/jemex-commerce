@@ -43,16 +43,20 @@ const Navigation = () => {
           {/* Logo */}
           <button 
             onClick={() => scrollToSection('inicio')}
-            className="flex items-center hover:opacity-80 transition-opacity"
+            className="flex items-center hover:opacity-80 transition-opacity group"
           >
-            <img 
-              src={logoJemex} 
-              alt="Jemex Commerce Logo" 
-              className={cn(
-                "h-10 md:h-12 w-auto object-contain transition-all duration-300",
-                isScrolled ? "drop-shadow-md" : "drop-shadow-lg brightness-110"
-              )}
-            />
+            <div className={cn(
+              "px-3 py-2 rounded-lg transition-all duration-300",
+              isScrolled 
+                ? "bg-white/90 shadow-md" 
+                : "bg-white/95 shadow-lg backdrop-blur-sm"
+            )}>
+              <img 
+                src={logoJemex} 
+                alt="Jemex Commerce Logo" 
+                className="h-8 md:h-10 w-auto object-contain"
+              />
+            </div>
           </button>
 
           {/* Desktop Navigation */}
