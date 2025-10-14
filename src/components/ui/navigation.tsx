@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logoJemex from "@/assets/logo-jemex.jpg";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,20 +43,16 @@ const Navigation = () => {
           {/* Logo */}
           <button 
             onClick={() => scrollToSection('inicio')}
-            className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
+            className="flex items-center hover:opacity-80 transition-opacity"
           >
-            <div className={cn(
-              "font-heading font-bold text-2xl transition-colors",
-              isScrolled ? "text-primary" : "text-primary-foreground"
-            )}>
-              JEMEX
-            </div>
-            <div className={cn(
-              "text-sm font-medium tracking-wider transition-colors",
-              isScrolled ? "text-muted-foreground" : "text-primary-foreground/80"
-            )}>
-              COMMERCE
-            </div>
+            <img 
+              src={logoJemex} 
+              alt="Jemex Commerce Logo" 
+              className={cn(
+                "h-10 md:h-12 w-auto object-contain transition-all duration-300",
+                isScrolled ? "drop-shadow-md" : "drop-shadow-lg brightness-110"
+              )}
+            />
           </button>
 
           {/* Desktop Navigation */}

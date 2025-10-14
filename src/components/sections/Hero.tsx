@@ -33,41 +33,16 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center text-primary-foreground">
-          {/* Main Heading */}
-          <div
-            className={`mb-6 transition-all duration-1200 ${
-              isVisible ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <h1 className="font-heading font-bold text-5xl md:text-7xl lg:text-8xl mb-4 leading-tight relative">
-              <span
-                className="block text-primary-foreground animate-pulse-glow"
-                style={{ textShadow: "0 0 8px rgba(255,255,255,0.3)" }}
-              >
-                JEMEX
-              </span>
-              <span
-                className="block text-3xl md:text-4xl lg:text-5xl font-medium text-accent mt-2 animate-pulse-glow"
-                style={{ textShadow: "0 0 8px rgba(255,255,255,0.3)" }}
-              >
-                COMMERCE
-              </span>
-            </h1>
-            <div
-              className={`w-24 h-1 bg-accent mx-auto mb-6 transition-all duration-1000 ${
-                isVisible ? "w-32" : "w-0"
-              }`}
-            ></div>
-          </div>
 
-         {/* Tagline */}
-          <h2
-            className={`text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-primary-foreground transition-all duration-1000 delay-300 ${
+          {/* Tagline */}
+          <h1
+            className={`text-3xl md:text-5xl lg:text-6xl font-bold mb-8 text-primary-foreground transition-all duration-1000 ${
               isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-8"
             }`}
+            style={{ textShadow: "0 2px 10px rgba(0,0,0,0.3)" }}
           >
             Sembrar con responsabilidad, cosechar con compromiso
-          </h2>
+          </h1>
 
           <p
             className={`text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-500 ${
