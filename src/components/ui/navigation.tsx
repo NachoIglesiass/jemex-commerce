@@ -38,8 +38,8 @@ const Navigation = () => {
         ? "bg-background/95 backdrop-blur-sm border-b border-border shadow-soft" 
         : "bg-transparent backdrop-blur-[2px]"
     )}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+      <div className="container mx-auto px-2 md:px-4">
+        <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
           <button 
             onClick={() => scrollToSection('inicio')}
@@ -51,7 +51,7 @@ const Navigation = () => {
             <img 
               src={logoJemex} 
               alt="Jemex Commerce Logo" 
-              className="relative h-12 md:h-16 w-auto object-contain transition-all duration-300 drop-shadow-lg group-hover:scale-105 group-hover:brightness-110 group-hover:drop-shadow-xl"
+              className="relative h-16 md:h-20 lg:h-24 w-auto object-contain transition-all duration-300 drop-shadow-lg group-hover:scale-105 group-hover:brightness-110 group-hover:drop-shadow-xl"
             />
           </button>
 
