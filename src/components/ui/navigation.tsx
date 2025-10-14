@@ -43,12 +43,15 @@ const Navigation = () => {
           {/* Logo */}
           <button 
             onClick={() => scrollToSection('inicio')}
-            className="flex items-center hover:opacity-80 transition-opacity"
+            className="relative flex items-center group transition-all duration-300"
           >
+            {/* Backdrop para mejorar visibilidad */}
+            <div className="absolute inset-0 -m-2 bg-background/60 backdrop-blur-sm rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 scale-95 group-hover:scale-100"></div>
+            
             <img 
               src={logoJemex} 
               alt="Jemex Commerce Logo" 
-              className="h-16 md:h-20 w-auto object-contain transition-all duration-300"
+              className="relative h-16 md:h-20 w-auto object-contain transition-all duration-300 drop-shadow-lg group-hover:scale-110 group-hover:brightness-110 group-hover:drop-shadow-2xl"
             />
           </button>
 
