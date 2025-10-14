@@ -58,9 +58,9 @@ export const BeanVarietyCard = () => {
   const currentBean = beanVarieties[currentVariety];
 
   return (
-    <Card className="relative transition-all duration-500 border border-border/50 hover:border-secondary hover:shadow-elegant hover-lift group ring-2 ring-secondary bg-gradient-to-br from-secondary-light to-accent-light overflow-hidden">
+    <Card className="relative transition-all duration-500 border border-border/50 hover:border-secondary hover:shadow-elegant hover-lift group ring-2 ring-secondary bg-gradient-to-br from-secondary-light to-accent-light overflow-visible mt-4">
       <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
-        <Badge className="bg-secondary text-secondary-foreground px-3 py-1">
+        <Badge className="bg-secondary text-secondary-foreground px-3 py-1 shadow-md">
           <Star className="w-3 h-3 mr-1" />
           Producto Insignia
         </Badge>

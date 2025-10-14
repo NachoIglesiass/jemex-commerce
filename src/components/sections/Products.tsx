@@ -5,6 +5,9 @@ import { Wheat, CheckCircle, Star, Sparkles } from "lucide-react";
 import poroto1 from "@/assets/poroto1.jpg";
 import poroto2 from "@/assets/poroto2.jpeg";
 import poroto3 from "@/assets/poroto3.jpg";
+import granos2 from "@/assets/granos2.jpeg";
+import granos4 from "@/assets/granos4.jpeg";
+import garbanzo from "@/assets/garbanzo.jpg";
 import { useScrollAnimation, useMagneticHover } from "@/hooks/useScrollAnimation";
 import { BeanVarietyCard } from "./BeanVarietyCard";
 import {
@@ -33,21 +36,24 @@ const Products = () => {
       type: "Grano Premium",
       description: "Producida bajo estrictos estándares de calidad con control de trazabilidad desde el campo hasta su destino final.",
       features: ["Control de Calidad", "Certificaciones", "Exportación Global"],
-      highlight: false
+      highlight: false,
+      image: granos2
     },
     {
       name: "Maíz",
       type: "Grano Premium",
       description: "Seleccionado cuidadosamente para satisfacer las demandas de mercados exigentes en Latinoamérica y el resto del mundo.",
       features: ["Selección Rigurosa", "Mercados Globales", "Calidad Consistente"],
-      highlight: false
+      highlight: false,
+      image: granos4
     },
     {
       name: "Garbanzo",
       type: "Grano Premium",
       description: "Procesado con los más altos estándares para garantizar la máxima calidad y satisfacción del cliente.",
       features: ["Procesamiento Premium", "Estándares Altos", "Satisfacción Garantizada"],
-      highlight: false
+      highlight: false,
+      image: garbanzo
     }
   ];
 
@@ -95,24 +101,26 @@ const Products = () => {
           {products.map((product, index) => (
             <Card
             key={index}
-            className={`relative transition-all duration-500 border border-border/50 hover:border-secondary hover:shadow-elegant hover-lift hover:animate-glow-pulse ${
-              product.highlight
-                ? 'ring-2 ring-secondary bg-gradient-to-br from-secondary-light to-accent-light'
-                : ''
-            } ${productsVisible ? `opacity-100 translate-y-0 transition-all duration-700 delay-[${index * 100}ms]` : 'opacity-0 translate-y-8'}`}
+            className={`relative transition-all duration-500 border border-border/50 hover:border-secondary hover:shadow-elegant hover-lift hover:animate-glow-pulse overflow-hidden ${
+              productsVisible ? `opacity-100 translate-y-0 transition-all duration-700 delay-[${(index + 1) * 100}ms]` : 'opacity-0 translate-y-8'
+            }`}
           >
-            {product.highlight && (
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <Badge className="bg-secondary text-secondary-foreground px-3 py-1">
-                  <Star className="w-3 h-3 mr-1" />
-                  Producto Insignia
-                </Badge>
-              </div>
-            )}
+            {/* Background Image with Overlay */}
+            <div className="absolute inset-0 opacity-10 transition-opacity duration-500 hover:opacity-15">
+              <img
+                src={product.image}
+                alt={`${product.name} de alta calidad`}
+                className="w-full h-full object-cover"
+              />
+            </div>
 
-            <CardHeader className="pb-4">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Wheat className={`h-8 w-8 ${product.highlight ? 'text-secondary' : 'text-primary'}`} />
+            <CardHeader className="pb-4 relative z-10">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden border-2 border-primary/20">
+                <img
+                  src={product.image}
+                  alt={`Icono ${product.name}`}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <CardTitle className="text-center text-xl font-heading">
                 {product.name}
@@ -122,7 +130,7 @@ const Products = () => {
               </Badge>
             </CardHeader>
 
-            <CardContent className="pt-0">
+            <CardContent className="pt-0 relative z-10">
               <p className="text-muted-foreground text-sm mb-4 text-center">
                 {product.description}
               </p>
