@@ -263,4 +263,13 @@ All colors MUST be HSL.
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
+
+  /* Flip Card 3D Styles */
+  .flip-card-container {
+    perspective: 1000px;
+  }
+
+  .flip-card-flipped {
+    transform: rotateY(180deg);
+  }
 }

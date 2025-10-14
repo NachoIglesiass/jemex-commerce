@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { FlipCard } from "@/components/ui/flip-card";
 import { Target, Eye, Medal, Award, Shield, CheckCircle2, Handshake } from "lucide-react";
 import workerImage from "@/assets/worker-field.png";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -85,52 +86,51 @@ const About = () => {
 
         {/* Misión, Visión y Valores Section */}
         <div className="mb-12">
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <Card className="text-center hover:shadow-soft transition-shadow duration-300 border-secondary/20">
-              <CardContent className="p-6">
-                <Target className="h-12 w-12 text-secondary mx-auto mb-4" />
-                <h4 className="font-semibold text-xl mb-3 text-primary">Misión</h4>
+            <FlipCard
+              icon={<Target className="h-12 w-12 text-secondary" />}
+              title="Misión"
+              content={
                 <p className="text-muted-foreground">
                   Llevar al mundo lo mejor de la producción agroalimentaria argentina, conectando el norte del país con mercados globales mediante granos de alta calidad y servicios confiables.
                 </p>
-              </CardContent>
-            </Card>
+              }
+            />
 
-            <Card className="text-center hover:shadow-soft transition-shadow duration-300 border-secondary/20">
-              <CardContent className="p-6">
-                <Eye className="h-12 w-12 text-secondary mx-auto mb-4" />
-                <h4 className="font-semibold text-xl mb-3 text-primary">Visión</h4>
+            <FlipCard
+              icon={<Eye className="h-12 w-12 text-secondary" />}
+              title="Visión"
+              content={
                 <p className="text-muted-foreground">
                   Ser referentes en el comercio agroexportador, reconocidos por nuestra excelencia en cada etapa: cultivo, cosecha, control y entrega, construyendo relaciones comerciales duraderas.
                 </p>
-              </CardContent>
-            </Card>
+              }
+            />
 
-            <Card className="text-center hover:shadow-soft transition-shadow duration-300 border-secondary/20">
-              <CardContent className="p-6">
-                <Medal className="h-12 w-12 text-secondary mx-auto mb-4" />
-                <h4 className="font-semibold text-xl mb-3 text-primary">Valores</h4>
+            <FlipCard
+              icon={<Medal className="h-12 w-12 text-secondary" />}
+              title="Valores"
+              content={
                 <div className="text-left space-y-2">
                   <div className="flex items-start">
                     <CheckCircle2 className="h-4 w-4 text-secondary mr-2 mt-1 flex-shrink-0" />
-                    <p className="text-sm text-muted-foreground"><strong className="text-primary">Compromiso:</strong> Cumplimos lo que prometemos, en tiempo y forma</p>
+                    <p className="text-sm text-muted-foreground"><strong className="text-primary">Compromiso:</strong> Cumplimos lo que prometemos</p>
                   </div>
                   <div className="flex items-start">
                     <Award className="h-4 w-4 text-secondary mr-2 mt-1 flex-shrink-0" />
-                    <p className="text-sm text-muted-foreground"><strong className="text-primary">Calidad:</strong> Excelencia en cada grano que exportamos</p>
+                    <p className="text-sm text-muted-foreground"><strong className="text-primary">Calidad:</strong> Excelencia en cada grano</p>
                   </div>
                   <div className="flex items-start">
                     <Shield className="h-4 w-4 text-secondary mr-2 mt-1 flex-shrink-0" />
-                    <p className="text-sm text-muted-foreground"><strong className="text-primary">Transparencia:</strong> Relaciones comerciales claras y honestas</p>
+                    <p className="text-sm text-muted-foreground"><strong className="text-primary">Transparencia:</strong> Relaciones claras</p>
                   </div>
                   <div className="flex items-start">
                     <CheckCircle2 className="h-4 w-4 text-secondary mr-2 mt-1 flex-shrink-0" />
-                    <p className="text-sm text-muted-foreground"><strong className="text-primary">Profesionalismo:</strong> Equipo experto en comercio y agronomía</p>
+                    <p className="text-sm text-muted-foreground"><strong className="text-primary">Profesionalismo:</strong> Equipo experto</p>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              }
+            />
           </div>
         </div>
 
