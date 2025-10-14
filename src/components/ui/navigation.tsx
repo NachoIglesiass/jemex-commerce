@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import logoJemex from "@/assets/logo-jemex.jpg";
+import logoJemex from "@/assets/logo-jemex-transparent.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
