@@ -47,8 +47,8 @@ const Hero = () => {
             <img 
               src={logoJemex} 
               alt="Jemex Commerce" 
-              className="h-32 md:h-48 lg:h-56 w-auto object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.6)]"
-              style={{ filter: 'brightness(1.1) contrast(1.2)' }}
+              className="h-40 md:h-56 lg:h-64 w-auto object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.6)]"
+              style={{ filter: 'brightness(1.3) contrast(1.3)' }}
             />
           </div>
 
