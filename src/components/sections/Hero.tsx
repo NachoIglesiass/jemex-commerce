@@ -39,7 +39,7 @@ const Hero = () => {
 
           {/* Tagline */}
           <h1
-            className={`text-2xl md:text-4xl lg:text-5xl font-bold mb-8 text-primary-foreground transition-all duration-1000 ${
+            className={`text-xl md:text-3xl lg:text-4xl font-bold mb-8 text-primary-foreground transition-all duration-1000 ${
               isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-8"
             }`}
             style={{ textShadow: "0 2px 10px rgba(0,0,0,0.3)" }}
