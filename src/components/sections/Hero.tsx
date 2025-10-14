@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Leaf, Globe, Award } from "lucide-react";
 import heroImage from "@/assets/hero-agriculture.jpg";
-import logoJemex from "@/assets/logo-jemex-transparent.png";
+import logoJemex from "@/assets/logo-jemex-clean.png";
 import { useScrollAnimation, useParallax } from "@/hooks/useScrollAnimation";
 
 const Hero = () => {
