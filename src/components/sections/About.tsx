@@ -1,7 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Target, Eye, Medal, Award, Shield, CheckCircle2, Users } from "lucide-react";
+import { Target, Eye, Award, Shield, CheckCircle2, Users } from "lucide-react";
 import workerImage from "@/assets/worker-field.png";
+import medalIcon from "@/assets/medal-icon.png";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 
@@ -16,29 +17,6 @@ const About = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
-  const values = [
-    {
-      icon: Medal,
-      title: "Compromiso",
-      description: "Cumplimos lo que prometemos, en tiempo y forma"
-    },
-    {
-      icon: Award,
-      title: "Calidad",
-      description: "Excelencia en cada grano que exportamos"
-    },
-    {
-      icon: Shield,
-      title: "Transparencia",
-      description: "Relaciones comerciales claras y honestas"
-    },
-    {
-      icon: CheckCircle2,
-      title: "Profesionalismo",
-      description: "Equipo experto en comercio y agronomía"
-    }
-  ];
 
   return (
     <section id="nosotros" className="py-20 bg-secondary-light">
@@ -109,7 +87,7 @@ const About = () => {
 
             <Card className="text-center hover:shadow-soft transition-shadow duration-300 border-secondary/20">
               <CardContent className="p-6">
-                <Medal className="h-12 w-12 text-secondary mx-auto mb-4" />
+                <img src={medalIcon} alt="Medalla de valores" className="h-12 w-12 mx-auto mb-4" />
                 <h4 className="font-semibold text-xl mb-3 text-primary">Valores</h4>
                 <div className="text-left space-y-2">
                   <div className="flex items-start">
