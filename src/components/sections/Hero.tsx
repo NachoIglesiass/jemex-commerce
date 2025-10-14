@@ -40,7 +40,7 @@ const Hero = () => {
 
           {/* Logo */}
           <div
-            className={`flex justify-center mb-8 transition-all duration-1000 ${
+            className={`flex justify-center mb-4 transition-all duration-1000 ${
               isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-8"
             }`}
           >
@@ -54,7 +54,7 @@ const Hero = () => {
 
           {/* Tagline */}
           <h1
-            className={`text-xl md:text-3xl lg:text-4xl font-bold mb-8 text-primary-foreground transition-all duration-1000 ${
+            className={`text-xl md:text-3xl lg:text-4xl font-bold mb-6 text-primary-foreground transition-all duration-1000 ${
               isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-8"
             }`}
             style={{ textShadow: "0 2px 10px rgba(0,0,0,0.3)" }}
@@ -63,7 +63,7 @@ const Hero = () => {
           </h1>
 
           <p
-            className={`text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-500 ${
+            className={`text-lg md:text-xl text-primary-foreground/90 mb-6 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-500 ${
               isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-8"
             }`}
           >
@@ -72,7 +72,7 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div
-            className={`flex flex-col sm:flex-row gap-4 justify-center mb-12 transition-all duration-1000 delay-700 ${
+            className={`flex flex-col sm:flex-row gap-4 justify-center mb-10 transition-all duration-1000 delay-700 ${
               isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-8"
             }`}
           >
