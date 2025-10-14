@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Target, Eye, Medal, Award, Shield, CheckCircle2, Users } from "lucide-react";
+import { Target, Eye, Medal, Award, Shield, CheckCircle2, Handshake } from "lucide-react";
 import workerImage from "@/assets/worker-field.png";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -136,7 +136,7 @@ const About = () => {
 
         {/* Commitment */}
         <div className="bg-gradient-primary rounded-2xl p-8 md:p-12 text-center text-primary-foreground">
-          <Users className="h-16 w-16 text-accent mx-auto mb-6" />
+          <Handshake className="h-16 w-16 text-accent mx-auto mb-6" />
           <h3 className="font-heading font-bold text-2xl md:text-3xl mb-4">
             Nuestro Compromiso
           </h3>
