@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Target, Eye, Heart, Award, Shield, CheckCircle2, Users } from "lucide-react";
+import { Target, Eye, Medal, Award, Shield, CheckCircle2, Users } from "lucide-react";
 import workerImage from "@/assets/worker-field.png";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -19,7 +19,7 @@ const About = () => {
 
   const values = [
     {
-      icon: Heart,
+      icon: Medal,
       title: "Compromiso",
       description: "Cumplimos lo que prometemos, en tiempo y forma"
     },
@@ -109,7 +109,7 @@ const About = () => {
 
             <Card className="text-center hover:shadow-soft transition-shadow duration-300 border-secondary/20">
               <CardContent className="p-6">
-                <Heart className="h-12 w-12 text-secondary mx-auto mb-4" />
+                <Medal className="h-12 w-12 text-secondary mx-auto mb-4" />
                 <h4 className="font-semibold text-xl mb-3 text-primary">Valores</h4>
                 <div className="text-left space-y-2">
                   <div className="flex items-start">
