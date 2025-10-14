@@ -9,6 +9,7 @@ import granos2 from "@/assets/granos2.jpeg";
 import granos3 from "@/assets/granos3.jpeg";
 import granos4 from "@/assets/granos4.jpeg";
 import granos5 from "@/assets/granos5.jpeg";
+import porotoMung from "@/assets/poroto-mung.png";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import {
   Carousel,
@@ -41,7 +42,7 @@ const Gallery = () => {
       title: "Productos Premium", 
       description: "Granos de alta calidad: soja, maíz, poroto y garbanzo", 
       category: "Productos",
-      images: [grainsImage, granos2, granos3, granos4, granos5 ]
+      images: [grainsImage, granos2, granos3, granos4, granos5, porotoMung ]
     }
   ];
 

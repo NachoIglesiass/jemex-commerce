@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import poroto1 from "@/assets/poroto1.jpg";
 import poroto2 from "@/assets/poroto2.jpeg";
 import poroto3 from "@/assets/poroto3.jpg";
+import porotoMung from "@/assets/poroto-mung.png";
 
 const beanVarieties = [
   {
@@ -28,7 +29,7 @@ const beanVarieties = [
   {
     name: "Poroto Mung",
     description: "Alto contenido de fibra y minerales, popular en la cocina asiática.",
-    image: poroto1,
+    image: porotoMung,
     color: "text-green-700"
   }
 ];
