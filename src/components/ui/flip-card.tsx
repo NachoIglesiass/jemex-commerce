@@ -33,12 +33,12 @@ const FlipCard = ({ icon, title, content, className }: FlipCardProps) => {
           <div className="mb-5 transform group-hover:scale-110 transition-transform duration-300">
             {icon}
           </div>
-          <h4 className="font-heading font-bold text-2xl mb-6 text-primary text-center">
+          <h4 className="font-heading font-bold text-2xl mb-8 text-primary text-center">
             {title}
           </h4>
           <button 
             onClick={() => setIsFlipped(true)}
-            className="mt-auto px-8 py-3 text-sm font-semibold text-white bg-gradient-to-r from-secondary to-secondary/90 hover:from-secondary/90 hover:to-secondary rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
+            className="px-8 py-3 text-sm font-semibold text-white bg-gradient-to-r from-secondary to-secondary/90 hover:from-secondary/90 hover:to-secondary rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
           >
             Ver contenido
           </button>
