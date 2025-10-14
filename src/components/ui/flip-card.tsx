@@ -25,7 +25,7 @@ const FlipCard = ({ icon, title, content, className }: FlipCardProps) => {
       >
         {/* Front */}
         <div
-          className="absolute inset-0 w-full h-full rounded-xl border border-secondary/30 bg-gradient-to-br from-card via-card to-secondary/5 shadow-lg transition-all duration-300 flex flex-col items-center justify-center p-8"
+          className="absolute inset-0 w-full h-full rounded-xl border border-secondary/30 bg-gradient-to-br from-card via-card to-secondary/5 shadow-lg hover:shadow-2xl hover:border-secondary/60 transition-all duration-300 flex flex-col items-center justify-center p-8"
           style={{
             backfaceVisibility: "hidden",
           }}
