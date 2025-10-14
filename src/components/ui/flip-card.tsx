@@ -10,42 +10,14 @@ interface FlipCardProps {
 
 const FlipCard = ({ icon, title, content, className }: FlipCardProps) => {
   const [isFlipped, setIsFlipped] = React.useState(false);
-  const [isMobile, setIsMobile] = React.useState(false);
-
-  React.useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
 
   const handleClick = () => {
-    if (isMobile) {
-      setIsFlipped(!isFlipped);
-    }
-  };
-
-  const handleMouseEnter = () => {
-    if (!isMobile) {
-      setIsFlipped(true);
-    }
-  };
-
-  const handleMouseLeave = () => {
-    if (!isMobile) {
-      setIsFlipped(false);
-    }
+    setIsFlipped(!isFlipped);
   };
 
   return (
     <div
       className={cn("flip-card-container h-[280px]", className)}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
       onClick={handleClick}
     >
       <div
@@ -67,9 +39,9 @@ const FlipCard = ({ icon, title, content, className }: FlipCardProps) => {
         >
           <div className="mb-4">{icon}</div>
           <h4 className="font-semibold text-xl mb-3 text-primary text-center">{title}</h4>
-          <p className="text-xs text-muted-foreground text-center italic">
-            {isMobile ? "Tocá para ver más" : "Pasá el cursor para ver el contenido"}
-          </p>
+          <button className="mt-3 px-4 py-2 text-sm font-medium text-secondary border border-secondary/30 rounded-lg hover:bg-secondary/10 transition-colors">
+            Ver contenido
+          </button>
         </div>
 
         {/* Back */}
@@ -81,12 +53,10 @@ const FlipCard = ({ icon, title, content, className }: FlipCardProps) => {
             transform: "rotateY(180deg)",
           }}
         >
-          <div className="text-sm text-center">{content}</div>
-          {isMobile && (
-            <p className="text-xs text-muted-foreground text-center italic mt-4">
-              Tocá para volver
-            </p>
-          )}
+          <div className="text-sm text-center mb-4">{content}</div>
+          <button className="mt-3 px-4 py-2 text-sm font-medium text-primary border border-primary/30 rounded-lg hover:bg-primary/10 transition-colors">
+            Ocultar
+          </button>
         </div>
       </div>
     </div>
