@@ -58,7 +58,7 @@ export const BeanVarietyCard = () => {
   const currentBean = beanVarieties[currentVariety];
 
   return (
-    <Card className="relative transition-all duration-500 border border-border/50 hover:border-secondary hover:shadow-elegant hover-lift group ring-2 ring-secondary bg-gradient-to-br from-secondary-light to-accent-light overflow-visible mt-4">
+    <Card className="relative transition-all duration-500 border border-border/50 hover:border-secondary hover:shadow-elegant hover-lift group ring-2 ring-secondary bg-gradient-to-br from-secondary-light to-accent-light overflow-visible mt-4 h-full flex flex-col">
       <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
         <Badge className="bg-secondary text-secondary-foreground px-3 py-1 shadow-md">
           <Star className="w-3 h-3 mr-1" />
@@ -95,9 +95,9 @@ export const BeanVarietyCard = () => {
         </Badge>
       </CardHeader>
 
-      <CardContent className="pt-0 relative z-10">
+      <CardContent className="pt-0 relative z-10 flex-grow flex flex-col">
         {/* Variety Display */}
-        <div className="mb-4 min-h-[140px]">
+        <div className="mb-4 min-h-[140px] flex items-center justify-center">
           <div className={`text-center transition-all duration-500 ${
             isTransitioning ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
           }`}>

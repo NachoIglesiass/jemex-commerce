@@ -6,7 +6,7 @@ import poroto1 from "@/assets/poroto1.jpg";
 import poroto2 from "@/assets/poroto2.jpeg";
 import poroto3 from "@/assets/poroto3.jpg";
 import granos2 from "@/assets/granos2.jpeg";
-import granos4 from "@/assets/granos4.jpeg";
+import maiz from "@/assets/maiz.jpeg";
 import garbanzo from "@/assets/garbanzo.jpg";
 import { useScrollAnimation, useMagneticHover } from "@/hooks/useScrollAnimation";
 import { BeanVarietyCard } from "./BeanVarietyCard";
@@ -45,7 +45,7 @@ const Products = () => {
       description: "Seleccionado cuidadosamente para satisfacer las demandas de mercados exigentes en Latinoamérica y el resto del mundo.",
       features: ["Selección Rigurosa", "Mercados Globales", "Calidad Consistente"],
       highlight: false,
-      image: granos4
+      image: maiz
     },
     {
       name: "Garbanzo",
@@ -101,7 +101,7 @@ const Products = () => {
           {products.map((product, index) => (
             <Card
             key={index}
-            className={`relative transition-all duration-500 border border-border/50 hover:border-secondary hover:shadow-elegant hover-lift hover:animate-glow-pulse overflow-hidden ${
+            className={`relative transition-all duration-500 border border-border/50 hover:border-secondary hover:shadow-elegant hover-lift hover:animate-glow-pulse overflow-hidden h-full flex flex-col ${
               productsVisible ? `opacity-100 translate-y-0 transition-all duration-700 delay-[${(index + 1) * 100}ms]` : 'opacity-0 translate-y-8'
             }`}
           >
@@ -130,8 +130,8 @@ const Products = () => {
               </Badge>
             </CardHeader>
 
-            <CardContent className="pt-0 relative z-10">
-              <p className="text-muted-foreground text-sm mb-4 text-center">
+            <CardContent className="pt-0 relative z-10 flex-grow flex flex-col">
+              <p className="text-muted-foreground text-sm mb-4 text-center min-h-[60px]">
                 {product.description}
               </p>
               <div className="space-y-2">
