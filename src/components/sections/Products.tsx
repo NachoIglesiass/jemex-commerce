@@ -101,7 +101,7 @@ const Products = () => {
           {products.map((product, index) => (
             <Card
             key={index}
-            className={`relative transition-all duration-500 border border-border/50 hover:border-secondary hover:shadow-elegant hover-lift hover:animate-glow-pulse overflow-hidden h-full flex flex-col ${
+            className={`relative transition-all duration-500 border-2 border-black/10 hover:border-secondary hover:shadow-elegant hover-lift hover:animate-glow-pulse overflow-hidden h-full flex flex-col ${
               productsVisible ? `opacity-100 translate-y-0 transition-all duration-700 delay-[${(index + 1) * 100}ms]` : 'opacity-0 translate-y-8'
             }`}
           >
