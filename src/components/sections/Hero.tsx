@@ -47,10 +47,10 @@ const Hero = () => {
             <img 
               src={logoJemex} 
               alt="Jemex Commerce" 
-              className="h-48 md:h-64 lg:h-72 w-auto object-contain drop-shadow-[0_10px_20px_rgba(255,255,255,0.4)] hover:scale-105 transition-all duration-700 ease-in-out animate-glow-pulse"
+              className="h-48 md:h-64 lg:h-72 w-auto object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.5)] hover:scale-105 transition-all duration-700 ease-in-out"
               style={{ 
-                filter: 'brightness(1.5) contrast(1.4) drop-shadow(0 0 20px rgba(255,255,255,0.6))',
-                animation: 'float 6s ease-in-out infinite, glow-pulse 3s ease-in-out infinite'
+                filter: 'brightness(1.4) contrast(1.3)',
+                animation: 'float 6s ease-in-out infinite'
               }}
             />
           </div>
