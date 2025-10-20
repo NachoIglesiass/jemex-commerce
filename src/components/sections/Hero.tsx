@@ -34,30 +34,31 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-12 mt-8">
-        <div className="max-w-4xl mx-auto text-center text-primary-foreground">
+      <div className="relative z-10 container mx-auto px-4 py-8">
+        <div className="max-w-6xl mx-auto text-center text-primary-foreground">
 
           {/* Tagline */}
           <h1
-            className={`text-xl md:text-3xl lg:text-4xl font-bold mb-8 text-primary-foreground transition-all duration-1000 mt-8 md:mt-0 ${
+            className={`text-2xl md:text-4xl lg:text-6xl font-extrabold mb-10 text-primary-foreground transition-all duration-1000 mt-8 md:mt-0 tracking-tight ${
               isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-8"
             }`}
-            style={{ textShadow: "0 2px 10px rgba(0,0,0,0.3)" }}
+            style={{ textShadow: "0 4px 20px rgba(0,0,0,0.4)" }}
           >
             Exportamos calidad desde el norte argentino
           </h1>
 
           <p
-            className={`text-lg md:text-xl text-primary-foreground/90 mb-12 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-500 ${
+            className={`text-lg md:text-xl lg:text-2xl text-primary-foreground/95 mb-14 max-w-5xl mx-auto leading-relaxed transition-all duration-1000 delay-500 ${
               isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-8"
             }`}
+            style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}
           >
             Transformamos la producción en confianza. Somos una empresa argentina con visión global, dedicada a ofrecer granos de primera calidad con un servicio logístico eficiente y confiable. Desde el origen hasta el destino final, trabajamos con compromiso, innovación y precisión para conectar el valor del campo con los mercados del mundo.
           </p>
 
           {/* CTA Buttons */}
           <div
-            className={`flex flex-col sm:flex-row gap-4 justify-center mb-20 transition-all duration-1000 delay-700 ${
+            className={`flex flex-col sm:flex-row gap-4 justify-center mb-16 transition-all duration-1000 delay-700 ${
               isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-8"
             }`}
           >
