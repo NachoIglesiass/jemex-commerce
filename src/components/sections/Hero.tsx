@@ -2,10 +2,14 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-agriculture.jpg";
 import { useScrollAnimation, useParallax } from "@/hooks/useScrollAnimation";
+import { useLanguage } from "@/hooks/useLanguage";
+import { translations } from "@/lib/translations";
 
 const Hero = () => {
   const { ref: heroRef, isVisible } = useScrollAnimation(0.2);
   const { ref: bgRef, offset } = useParallax(0.3);
+  const { language } = useLanguage();
+  const t = translations[language].hero;
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -39,21 +43,21 @@ const Hero = () => {
 
           {/* Tagline */}
           <h1
-            className={`text-2xl md:text-4xl lg:text-6xl font-extrabold mb-10 text-primary-foreground transition-all duration-1000 mt-8 md:mt-0 tracking-tight ${
+            className={`text-xl md:text-3xl lg:text-4xl font-extrabold mb-10 text-primary-foreground transition-all duration-1000 mt-8 md:mt-0 tracking-tight ${
               isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-8"
             }`}
             style={{ textShadow: "0 4px 20px rgba(0,0,0,0.4)" }}
           >
-            Exportamos calidad desde el norte argentino
+            {t.title}
           </h1>
 
           <p
-            className={`text-lg md:text-xl lg:text-2xl text-primary-foreground/95 mb-14 max-w-5xl mx-auto leading-relaxed transition-all duration-1000 delay-500 ${
+            className={`text-base md:text-lg lg:text-xl text-primary-foreground/95 mb-14 max-w-5xl mx-auto leading-relaxed transition-all duration-1000 delay-500 ${
               isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-8"
             }`}
             style={{ textShadow: "0 2px 8px rgba(0,0,0,0.3)" }}
           >
-            Transformamos la producción en confianza. Somos una empresa argentina con visión global, dedicada a ofrecer granos de primera calidad con un servicio logístico eficiente y confiable. Desde el origen hasta el destino final, trabajamos con compromiso, innovación y precisión para conectar el valor del campo con los mercados del mundo.
+            {t.subtitle}
           </p>
 
           {/* CTA Buttons */}
@@ -66,14 +70,14 @@ const Hero = () => {
               onClick={() => scrollToSection("productos")}
               className="bg-secondary hover:bg-secondary/90 text-secondary-foreground text-lg px-8 py-6 shadow-elegant hover-glow group transition-transform duration-300 hover:scale-105"
             >
-              Nuestros Productos
+              {t.btnProducts}
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button
               onClick={() => scrollToSection("nosotros")}
               className="bg-primary-foreground text-primary font-semibold text-lg px-8 py-6 glass transition-transform duration-300 hover:scale-105 hover:bg-primary-foreground"
             >
-              Conoce Más
+              {t.btnLearnMore}
             </Button>
           </div>
 

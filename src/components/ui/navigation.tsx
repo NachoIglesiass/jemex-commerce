@@ -3,10 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import logoJemex from "@/assets/logo-jemex-clean.png";
+import { useLanguage } from "@/hooks/useLanguage";
+import { translations } from "@/lib/translations";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { language, toggleLanguage } = useLanguage();
+  const t = translations[language].nav;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,10 +29,10 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { id: 'inicio', label: 'Inicio' },
-    { id: 'nosotros', label: 'Nosotros' },
-    { id: 'productos', label: 'Productos' },
-    { id: 'galeria', label: 'Galería' },
+    { id: 'inicio', label: t.inicio },
+    { id: 'nosotros', label: t.nosotros },
+    { id: 'productos', label: t.productos },
+    { id: 'galeria', label: t.galeria },
   ];
 
   return (
@@ -75,12 +79,36 @@ const Navigation = () => {
               onClick={() => scrollToSection('contacto')}
               className="bg-gradient-primary hover:opacity-90 transition-opacity"
             >
-              Contactanos
+              {t.contacto}
             </Button>
+            
+            {/* Language Toggle */}
+            <button
+              onClick={toggleLanguage}
+              className={cn(
+                "text-2xl hover:scale-110 transition-transform duration-200",
+                isScrolled ? "" : "drop-shadow-lg"
+              )}
+              aria-label="Toggle language"
+            >
+              {language === 'es' ? '🇺🇸' : '🇪🇸'}
+            </button>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-3">
+            {/* Language Toggle Mobile */}
+            <button
+              onClick={toggleLanguage}
+              className={cn(
+                "text-2xl hover:scale-110 transition-transform duration-200",
+                !isScrolled && "drop-shadow-lg"
+              )}
+              aria-label="Toggle language"
+            >
+              {language === 'es' ? '🇺🇸' : '🇪🇸'}
+            </button>
+            
             <Button
               variant="ghost"
               size="sm"
@@ -119,7 +147,7 @@ const Navigation = () => {
                 onClick={() => scrollToSection('contacto')}
                 className="w-full bg-gradient-primary hover:opacity-90 transition-opacity"
               >
-                Contactanos
+                {t.contacto}
               </Button>
             </div>
           </div>
