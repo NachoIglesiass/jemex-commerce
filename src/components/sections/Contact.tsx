@@ -67,7 +67,6 @@ const Contact = () => {
     { value: "general", label: t.generalInquiry, icon: Info },
     { value: "comercial", label: t.commercialConditions, icon: FileText },
     { value: "tecnica", label: t.technicalInfo, icon: Package },
-    { value: "muestra", label: t.productSamples, icon: Package }
   ];
 
   return (
