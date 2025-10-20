@@ -1,4 +1,4 @@
-import { Mail, MapPin, Leaf, Phone } from "lucide-react";
+import { Mail, MapPin, Leaf, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 import { translations } from "@/lib/translations";
 
@@ -82,7 +82,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="flex justify-center md:justify-start items-start space-x-3">
-                <Phone className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
+                <MessageCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
                 <div>
                   <a
                     href="https://wa.me/5493876123456"
