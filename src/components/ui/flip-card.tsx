@@ -63,8 +63,8 @@ const FlipCard = ({ icon, title, content, className }: FlipCardProps) => {
           </div>
 
           {/* Contenido */}
-          <div className="flex-1 flex items-center justify-center text-center mb-6">
-            <div className="text-sm leading-relaxed text-foreground">
+          <div className="flex-1 flex items-start justify-start text-left mb-6">
+            <div className="text-sm leading-relaxed text-foreground w-full">
               {content}
             </div>
           </div>
