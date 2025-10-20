@@ -144,92 +144,16 @@ const Products = () => {
           ))}
         </div>
 
-        {/* Quality Section */}
-        <div ref={qualityRef as any} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Image Carousel - Poroto */}
-          <div className={`relative transition-all duration-1000 ${qualityVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
-            <div className="relative overflow-hidden rounded-2xl shadow-elegant hover-lift">
-              <Carousel
-                opts={{
-                  align: "start",
-                  loop: true,
-                }}
-                plugins={[
-                  Autoplay({
-                    delay: 3500,
-                  }),
-                ]}
-                className="w-full"
-              >
-                <CarouselContent>
-                  <CarouselItem>
-                    <img
-                      src={poroto1}
-                      alt="Poroto - Nuestro producto estrella de alta calidad"
-                      className="w-full h-[400px] object-cover"
-                    />
-                  </CarouselItem>
-                  <CarouselItem>
-                    <img
-                      src={poroto2}
-                      alt="Poroto blanco premium de calidad excepcional"
-                      className="w-full h-[400px] object-cover"
-                    />
-                  </CarouselItem>
-                  <CarouselItem>
-                    <img
-                      src={poroto3}
-                      alt="Poroto rojo de alta calidad para exportación"
-                      className="w-full h-[400px] object-cover"
-                    />
-                  </CarouselItem>
-                </CarouselContent>
-                <CarouselPrevious className="left-4 bg-background/80 hover:bg-background" />
-                <CarouselNext className="right-4 bg-background/80 hover:bg-background" />
-              </Carousel>
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent pointer-events-none"></div>
-            </div>
-          </div>
-
-          {/* Content */}
-          <div className={`space-y-6 transition-all duration-1000 delay-300 ${qualityVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
-            <div>
-              <div className="flex items-center mb-4">
-                <Sparkles className="h-8 w-8 text-accent mr-3" />
-                <h3 className="font-heading font-bold text-2xl md:text-3xl text-primary">
-                  {t.qualityGuaranteed}
-                </h3>
-              </div>
-              <p className="text-foreground text-lg mb-6 leading-relaxed">
-                {t.qualityText}
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              {qualityPoints.map((point, index) => (
-                <div
-                  key={index}
-                  className={`flex items-start transition-all duration-500 ${
-                    qualityVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                  }`}
-                >
-                  <CheckCircle className="h-5 w-5 text-secondary mr-3 mt-0.5 flex-shrink-0" />
-                  <p className="text-foreground">{point}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="pt-6">
-              <Button
-                ref={magneticRef as any}
-                onClick={() => scrollToSection('contacto')}
-                className="bg-gradient-primary hover:opacity-90 transition-all duration-300 text-lg px-8 py-6"
-              >
-                {t.btnRequest}
-                <div className="ml-2 transition-transform group-hover:translate-x-1">→</div>
-              </Button>
-            </div>
-          </div>
+        {/* CTA Button */}
+        <div className="flex justify-center mt-12">
+          <Button
+            ref={magneticRef as any}
+            onClick={() => scrollToSection('contacto')}
+            className="bg-gradient-primary hover:opacity-90 transition-all duration-300 text-lg px-8 py-6"
+          >
+            {t.btnRequest}
+            <div className="ml-2 transition-transform group-hover:translate-x-1">→</div>
+          </Button>
         </div>
       </div>
     </section>
