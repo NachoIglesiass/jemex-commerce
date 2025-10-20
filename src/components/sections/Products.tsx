@@ -81,13 +81,6 @@ const Products = () => {
               headerVisible ? 'w-32 opacity-100' : 'w-0 opacity-0'
             }`}
           ></div>
-          <p
-            className={`text-xl text-muted-foreground max-w-3xl mx-auto transition-all duration-1000 delay-400 ${
-              headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-          >
-            Granos de alta calidad cultivados en el norte argentino, con trazabilidad garantizada y control de calidad en cada etapa del proceso.
-          </p>
         </div>
 
         {/* Products Grid */}

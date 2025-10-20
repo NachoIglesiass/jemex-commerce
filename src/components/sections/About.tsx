@@ -77,9 +77,6 @@ const About = () => {
               <p className="text-foreground leading-relaxed mb-4">
                 <em>"Donde la calidad y la seriedad abren mercados."</em> Nos enfocamos en ofrecer productos confiables, con trazabilidad garantizada, gestionados por un equipo profesional con experiencia en <strong>Comercio Exterior, Administración Agropecuaria e Ingeniería Agronómica</strong>.
               </p>
-              <p className="text-foreground leading-relaxed">
-                Nuestra ubicación estratégica en el norte argentino nos permite conectar de manera ágil y eficiente con distintos puntos del país y del extranjero, optimizando tiempos y costos logísticos.
-              </p>
             </div>
           </div>
         </div>
@@ -114,19 +111,19 @@ const About = () => {
                 <div className="text-left space-y-2">
                   <div className="flex items-start">
                     <CheckCircle2 className="h-4 w-4 text-secondary mr-2 mt-1 flex-shrink-0" />
-                    <p className="text-sm text-muted-foreground"><strong className="text-primary">Compromiso:</strong> Cumplimos lo que prometemos</p>
+                    <p className="text-sm text-muted-foreground"><strong className="text-primary">Compromiso</strong></p>
                   </div>
                   <div className="flex items-start">
                     <Award className="h-4 w-4 text-secondary mr-2 mt-1 flex-shrink-0" />
-                    <p className="text-sm text-muted-foreground"><strong className="text-primary">Calidad:</strong> Excelencia en cada grano</p>
+                    <p className="text-sm text-muted-foreground"><strong className="text-primary">Calidad</strong> </p>
                   </div>
                   <div className="flex items-start">
                     <Shield className="h-4 w-4 text-secondary mr-2 mt-1 flex-shrink-0" />
-                    <p className="text-sm text-muted-foreground"><strong className="text-primary">Transparencia:</strong> Relaciones claras</p>
+                    <p className="text-sm text-muted-foreground"><strong className="text-primary">Transparencia</strong></p>
                   </div>
                   <div className="flex items-start">
                     <CheckCircle2 className="h-4 w-4 text-secondary mr-2 mt-1 flex-shrink-0" />
-                    <p className="text-sm text-muted-foreground"><strong className="text-primary">Profesionalismo:</strong> Equipo experto</p>
+                    <p className="text-sm text-muted-foreground"><strong className="text-primary">Profesionalismo</strong> </p>
                   </div>
                 </div>
               }

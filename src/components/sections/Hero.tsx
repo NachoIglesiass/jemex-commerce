@@ -44,7 +44,7 @@ const Hero = () => {
             }`}
             style={{ textShadow: "0 2px 10px rgba(0,0,0,0.3)" }}
           >
-            Sembrar con responsabilidad, cosechar con compromiso
+            Exportamos calidad desde el norte argentino
           </h1>
 
           <p
@@ -52,7 +52,8 @@ const Hero = () => {
               isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-8"
             }`}
           >
-            Desde Rosario de la Frontera, Salta, llevamos al mundo granos de calidad excepcional, cultivados con respeto por la tierra y acompañados por una trazabilidad transparente de principio a fin.
+            Transformamos la producción en confianza.
+            Somos una empresa argentina con visión global, dedicada a ofrecer granos de calidad, acompañado de un servicio logístico eficiente y confiable. Desde el origen hasta el destino final, trabajamos con compromiso, innovación y precisión para conectar el valor del campo con los mercados del mundo.
           </p>
 
           {/* CTA Buttons */}

@@ -115,7 +115,8 @@ const Contact = () => {
             <Card className="mt-6 border-secondary/20">
               <CardHeader>
                 <CardTitle className="text-lg font-heading text-primary">
-                  Información Disponible
+                 Contactanos por:
+
                 </CardTitle>
               </CardHeader>
               <CardContent>
