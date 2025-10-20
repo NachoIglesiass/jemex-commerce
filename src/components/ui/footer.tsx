@@ -1,4 +1,4 @@
-import { Mail, MapPin, Leaf } from "lucide-react";
+import { Mail, MapPin, Leaf, Phone } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 import { translations } from "@/lib/translations";
 
@@ -23,7 +23,7 @@ const Footer = () => {
             <p className="text-primary-foreground/80 mb-4 leading-relaxed">
               {t.description}
             </p>
-            <div className="flex justify-center md:justify-start items-center space-x-2 text-accent">
+            <div className="flex justify-center md:justify-start items-center space-x-2 text-secondary">
               <Leaf className="h-5 w-5" />
               <span className="text-sm font-medium">
                 {t.qualityTag}
@@ -50,7 +50,7 @@ const Footer = () => {
                         element.scrollIntoView({ behavior: "smooth" });
                       }
                     }}
-                    className="text-primary-foreground/80 hover:text-accent transition-colors duration-200"
+                    className="text-primary-foreground/80 hover:text-secondary transition-colors duration-200"
                   >
                     {link.name}
                   </button>
@@ -64,21 +64,34 @@ const Footer = () => {
             <h4 className="font-heading font-semibold text-lg mb-4">{t.contact}</h4>
             <div className="space-y-3">
               <div className="flex justify-center md:justify-start items-start space-x-3">
-                <Mail className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                <Mail className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
                 <div>
                   <a
                     href="mailto:jemex.commerce@gmail.com"
-                    className="text-primary-foreground/80 hover:text-accent transition-colors"
+                    className="text-primary-foreground/80 hover:text-secondary transition-colors"
                   >
                     jemex.commerce@gmail.com
                   </a>
                 </div>
               </div>
               <div className="flex justify-center md:justify-start items-start space-x-3">
-                <MapPin className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                <MapPin className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
                 <div className="text-primary-foreground/80">
                   <p>Rosario de la Frontera</p>
                   <p>Salta, Argentina</p>
+                </div>
+              </div>
+              <div className="flex justify-center md:justify-start items-start space-x-3">
+                <Phone className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
+                <div>
+                  <a
+                    href="https://wa.me/5493876123456"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary-foreground/80 hover:text-secondary transition-colors"
+                  >
+                    WhatsApp: +54 9 387 612-3456
+                  </a>
                 </div>
               </div>
             </div>
@@ -94,9 +107,9 @@ const Footer = () => {
             <p className="text-primary-foreground/60 text-sm">
               {t.tagline}
             </p>
-            <p className="text-sm font-semibold text-accent hover:text-wine-gold transition-colors">
+            <p className="text-sm font-semibold text-secondary hover:text-secondary/80 transition-colors">
                 {t.developedBy}{" "}
-              <span className="text-wine-gold font-bold">Ignacio Iglesias</span>
+              <span className="text-secondary font-bold">Ignacio Iglesias</span>
             </p>
           </div>
         </div>

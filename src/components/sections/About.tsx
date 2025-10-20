@@ -115,7 +115,7 @@ const About = () => {
 
         {/* Commitment */}
         <div className="bg-gradient-primary rounded-2xl p-8 md:p-12 text-center text-primary-foreground">
-          <Handshake className="h-16 w-16 text-accent mx-auto mb-6" />
+          <Handshake className="h-16 w-16 text-secondary mx-auto mb-6" />
           <h3 className="font-heading font-bold text-2xl md:text-3xl mb-4">
             {t.ourCommitment}
           </h3>
