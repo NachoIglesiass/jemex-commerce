@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, MapPin, Phone, Clock, Send, FileText, Info, Package } from "lucide-react";
+import { Mail, MapPin, Send, Package, Info, FileText } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 import { translations } from "@/lib/translations";
 
@@ -53,20 +53,13 @@ const Contact = () => {
     {
       icon: Mail,
       title: t.email,
-      value: t.emailValue,
-      description: t.emailDesc
+      value: t.emailValue
     },
     {
       icon: MapPin,
       title: t.location,
       value: t.locationValue,
       description: t.locationDesc
-    },
-    {
-      icon: Clock,
-      title: t.schedule,
-      value: t.scheduleValue,
-      description: t.scheduleDesc
     }
   ];
 
@@ -221,26 +214,13 @@ const Contact = () => {
                     />
                   </div>
 
-                  <div className="flex flex-col sm:flex-row gap-4 items-start">
-                    <Button 
-                      type="submit" 
-                      className="bg-gradient-primary hover:opacity-90 transition-opacity text-lg px-8 py-6"
-                    >
-                      <Send className="w-5 h-5 mr-2" />
-                      {t.btnSend}
-                    </Button>
-                    
-                    <div className="flex flex-wrap gap-2">
-                      <Badge variant="outline" className="text-xs">
-                        <Info className="w-3 h-3 mr-1" />
-                        {t.response24h}
-                      </Badge>
-                      <Badge variant="outline" className="text-xs">
-                        <FileText className="w-3 h-3 mr-1" />
-                        {t.technicalInfoAvailable}
-                      </Badge>
-                    </div>
-                  </div>
+                  <Button 
+                    type="submit" 
+                    className="bg-gradient-primary hover:opacity-90 transition-opacity text-lg px-8 py-6"
+                  >
+                    <Send className="w-5 h-5 mr-2" />
+                    {t.btnSend}
+                  </Button>
                 </form>
               </CardContent>
             </Card>
