@@ -7,9 +7,14 @@ import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, MapPin, Phone, Clock, Send, FileText, Info, Package } from "lucide-react";
+import { useLanguage } from "@/hooks/useLanguage";
+import { translations } from "@/lib/translations";
 
 const Contact = () => {
   const { toast } = useToast();
+  const { language } = useLanguage();
+  const t = translations[language].contact;
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -23,8 +28,8 @@ const Contact = () => {
     
     // Simulate form submission
     toast({
-      title: "Mensaje enviado",
-      description: "Nos pondremos en contacto contigo pronto.",
+      title: t.messageSent,
+      description: t.messageDesc,
     });
     
     // Reset form
@@ -47,29 +52,29 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Mail,
-      title: "Email",
-      value: "jemex.commerce@gmail.com",
-      description: "Respuesta en 24 horas"
+      title: t.email,
+      value: t.emailValue,
+      description: t.emailDesc
     },
     {
       icon: MapPin,
-      title: "Ubicación",
-      value: "Rosario de la Frontera, Salta",
-      description: "Argentina"
+      title: t.location,
+      value: t.locationValue,
+      description: t.locationDesc
     },
     {
       icon: Clock,
-      title: "Horario",
-      value: "Lun - Vie: 8:00 - 18:00",
-      description: "Hora Argentina (GMT-3)"
+      title: t.schedule,
+      value: t.scheduleValue,
+      description: t.scheduleDesc
     }
   ];
 
   const inquiryTypes = [
-    { value: "general", label: "Consulta General", icon: Info },
-    { value: "comercial", label: "Condiciones Comerciales", icon: FileText },
-    { value: "tecnica", label: "Información Técnica", icon: Package },
-    { value: "muestra", label: "Muestras de Producto", icon: Package }
+    { value: "general", label: t.generalInquiry, icon: Info },
+    { value: "comercial", label: t.commercialConditions, icon: FileText },
+    { value: "tecnica", label: t.technicalInfo, icon: Package },
+    { value: "muestra", label: t.productSamples, icon: Package }
   ];
 
   return (
@@ -78,11 +83,11 @@ const Contact = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="font-heading font-bold text-4xl md:text-5xl text-primary mb-4">
-            Contacto
+            {t.title}
           </h2>
           <div className="w-24 h-1 bg-secondary mx-auto mb-6"></div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            ¿Querés conocer más? Estamos aquí para responder todas tus consultas sobre nuestros productos y servicios.
+            {t.subtitle}
           </p>
         </div>
 
@@ -92,7 +97,7 @@ const Contact = () => {
             <Card className="h-fit border-secondary/20">
               <CardHeader>
                 <CardTitle className="text-xl font-heading text-primary">
-                  Información de Contacto
+                  {t.contactInfo}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -115,8 +120,7 @@ const Contact = () => {
             <Card className="mt-6 border-secondary/20">
               <CardHeader>
                 <CardTitle className="text-lg font-heading text-primary">
-                 Contactanos por:
-
+                  {t.contactBy}
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -137,17 +141,17 @@ const Contact = () => {
             <Card className="border-secondary/20">
               <CardHeader>
                 <CardTitle className="text-2xl font-heading text-primary">
-                  Envíanos tu Consulta
+                  {t.sendInquiry}
                 </CardTitle>
                 <p className="text-muted-foreground">
-                  Completa el formulario y nos pondremos en contacto contigo a la brevedad.
+                  {t.formDesc}
                 </p>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <Label htmlFor="name">Nombre y Apellido *</Label>
+                      <Label htmlFor="name">{t.name} *</Label>
                       <Input
                         id="name"
                         name="name"
@@ -156,11 +160,11 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleInputChange}
                         className="mt-1"
-                        placeholder="Tu nombre completo"
+                        placeholder={t.namePlaceholder}
                       />
                     </div>
                     <div>
-                      <Label htmlFor="email">Email *</Label>
+                      <Label htmlFor="email">{t.emailLabel} *</Label>
                       <Input
                         id="email"
                         name="email"
@@ -169,13 +173,13 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         className="mt-1"
-                        placeholder="tu@email.com"
+                        placeholder={t.emailPlaceholder}
                       />
                     </div>
                   </div>
 
                   <div>
-                    <Label htmlFor="company">Empresa</Label>
+                    <Label htmlFor="company">{t.company}</Label>
                     <Input
                       id="company"
                       name="company"
@@ -183,12 +187,12 @@ const Contact = () => {
                       value={formData.company}
                       onChange={handleInputChange}
                       className="mt-1"
-                      placeholder="Nombre de tu empresa (opcional)"
+                      placeholder={t.companyPlaceholder}
                     />
                   </div>
 
                   <div>
-                    <Label htmlFor="inquiry">Tipo de Consulta</Label>
+                    <Label htmlFor="inquiry">{t.inquiryType}</Label>
                     <select
                       id="inquiry"
                       name="inquiry"
@@ -205,7 +209,7 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <Label htmlFor="message">Mensaje *</Label>
+                    <Label htmlFor="message">{t.message} *</Label>
                     <Textarea
                       id="message"
                       name="message"
@@ -213,7 +217,7 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleInputChange}
                       className="mt-1 min-h-[120px]"
-                      placeholder="Cuéntanos sobre tu consulta o requerimiento..."
+                      placeholder={t.messagePlaceholder}
                     />
                   </div>
 
@@ -223,17 +227,17 @@ const Contact = () => {
                       className="bg-gradient-primary hover:opacity-90 transition-opacity text-lg px-8 py-6"
                     >
                       <Send className="w-5 h-5 mr-2" />
-                      Enviar Consulta
+                      {t.btnSend}
                     </Button>
                     
                     <div className="flex flex-wrap gap-2">
                       <Badge variant="outline" className="text-xs">
                         <Info className="w-3 h-3 mr-1" />
-                        Respuesta en 24hs
+                        {t.response24h}
                       </Badge>
                       <Badge variant="outline" className="text-xs">
                         <FileText className="w-3 h-3 mr-1" />
-                        Info técnica disponible
+                        {t.technicalInfoAvailable}
                       </Badge>
                     </div>
                   </div>

@@ -1,7 +1,12 @@
 import { Mail, MapPin, Leaf } from "lucide-react";
+import { useLanguage } from "@/hooks/useLanguage";
+import { translations } from "@/lib/translations";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { language } = useLanguage();
+  const t = translations[language].footer;
+  const nav = translations[language].nav;
 
   return (
     <footer className="bg-primary text-primary-foreground">
@@ -16,26 +21,26 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-primary-foreground/80 mb-4 leading-relaxed">
-              Empresa argentina especializada en exportación de granos de alta calidad desde el norte argentino al mundo.
+              {t.description}
             </p>
             <div className="flex justify-center md:justify-start items-center space-x-2 text-accent">
               <Leaf className="h-5 w-5" />
               <span className="text-sm font-medium">
-                Calidad y Seriedad desde 2025
+                {t.qualityTag}
               </span>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-heading font-semibold text-lg mb-4">Enlaces Rápidos</h4>
+            <h4 className="font-heading font-semibold text-lg mb-4">{t.quickLinks}</h4>
             <ul className="space-y-2">
               {[
-                { name: "Inicio", id: "inicio" },
-                { name: "Nosotros", id: "nosotros" },
-                { name: "Productos", id: "productos" },
-                { name: "Galería", id: "galeria" },
-                { name: "Contacto", id: "contacto" },
+                { name: nav.inicio, id: "inicio" },
+                { name: nav.nosotros, id: "nosotros" },
+                { name: nav.productos, id: "productos" },
+                { name: nav.galeria, id: "galeria" },
+                { name: nav.contacto, id: "contacto" },
               ].map((link) => (
                 <li key={link.id}>
                   <button
@@ -56,7 +61,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-heading font-semibold text-lg mb-4">Contacto</h4>
+            <h4 className="font-heading font-semibold text-lg mb-4">{t.contact}</h4>
             <div className="space-y-3">
               <div className="flex justify-center md:justify-start items-start space-x-3">
                 <Mail className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
@@ -84,13 +89,13 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 mt-10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-3 md:space-y-0 text-center md:text-left">
             <p className="text-primary-foreground/60 text-sm">
-              © {currentYear} JEMEX Commerce. Todos los derechos reservados.
+              © {currentYear} JEMEX Commerce. {t.rights}
             </p>
             <p className="text-primary-foreground/60 text-sm">
-              Exportamos calidad desde el norte argentino
+              {t.tagline}
             </p>
             <p className="text-sm font-semibold text-accent hover:text-wine-gold transition-colors">
-                Desarrollado por{" "}
+                {t.developedBy}{" "}
               <span className="text-wine-gold font-bold">Ignacio Iglesias</span>
             </p>
           </div>

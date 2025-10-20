@@ -6,37 +6,41 @@ import poroto1 from "@/assets/poroto1.jpg";
 import poroto2 from "@/assets/poroto2.jpeg";
 import poroto3 from "@/assets/poroto3.jpg";
 import porotoMung from "@/assets/poroto-mung.png";
-
-const beanVarieties = [
-  {
-    name: "Poroto Negro",
-    description: "Rico en antioxidantes y proteínas, ideal para platos tradicionales latinoamericanos.",
-    image: poroto1,
-    color: "text-gray-800"
-  },
-  {
-    name: "Poroto Rojo",
-    description: "Textura cremosa y sabor intenso, perfecto para guisos y ensaladas.",
-    image: poroto3,
-    color: "text-red-700"
-  },
-  {
-    name: "Poroto Alubia",
-    description: "Variedad blanca versátil, excelente para sopas y platos mediterráneos.",
-    image: poroto2,
-    color: "text-amber-700"
-  },
-  {
-    name: "Poroto Mung",
-    description: "Alto contenido de fibra y minerales, popular en la cocina asiática.",
-    image: porotoMung,
-    color: "text-green-700"
-  }
-];
+import { useLanguage } from "@/hooks/useLanguage";
+import { translations } from "@/lib/translations";
 
 export const BeanVarietyCard = () => {
   const [currentVariety, setCurrentVariety] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const { language } = useLanguage();
+  const t = translations[language].beans;
+
+  const beanVarieties = [
+    {
+      name: t.porotoNegro,
+      description: t.porotoNegroDesc,
+      image: poroto1,
+      color: "text-gray-800"
+    },
+    {
+      name: t.porotoRojo,
+      description: t.porotoRojoDesc,
+      image: poroto3,
+      color: "text-red-700"
+    },
+    {
+      name: t.porotoAlubia,
+      description: t.porotoAlubiaDesc,
+      image: poroto2,
+      color: "text-amber-700"
+    },
+    {
+      name: t.porotoMung,
+      description: t.porotoMungDesc,
+      image: porotoMung,
+      color: "text-green-700"
+    }
+  ];
 
   const handleNext = () => {
     if (isTransitioning) return;
@@ -63,7 +67,7 @@ export const BeanVarietyCard = () => {
       <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
         <Badge className="bg-secondary text-secondary-foreground px-3 py-1 shadow-md">
           <Star className="w-3 h-3 mr-1" />
-          Producto Insignia
+          {t.flagshipProduct}
         </Badge>
       </div>
 
@@ -89,10 +93,10 @@ export const BeanVarietyCard = () => {
           />
         </div>
         <CardTitle className="text-center text-xl font-heading">
-          Poroto
+          {t.poroto}
         </CardTitle>
         <Badge variant="outline" className="w-fit mx-auto">
-          Producto Insignia
+          {t.flagshipProduct}
         </Badge>
       </CardHeader>
 
@@ -116,7 +120,7 @@ export const BeanVarietyCard = () => {
           <button
             onClick={handlePrev}
             className="p-2 rounded-full hover:bg-secondary/20 transition-all duration-300 hover:scale-110 active:scale-95"
-            aria-label="Variedad anterior"
+            aria-label={t.prevVariety}
           >
             <ChevronLeft className="w-5 h-5 text-secondary" />
           </button>
@@ -139,7 +143,7 @@ export const BeanVarietyCard = () => {
                     ? 'w-8 h-2 bg-secondary'
                     : 'w-2 h-2 bg-secondary/30 hover:bg-secondary/50'
                 }`}
-                aria-label={`Ver ${beanVarieties[index].name}`}
+                aria-label={`${t.view} ${beanVarieties[index].name}`}
               />
             ))}
           </div>
@@ -147,7 +151,7 @@ export const BeanVarietyCard = () => {
           <button
             onClick={handleNext}
             className="p-2 rounded-full hover:bg-secondary/20 transition-all duration-300 hover:scale-110 active:scale-95"
-            aria-label="Siguiente variedad"
+            aria-label={t.nextVariety}
           >
             <ChevronRight className="w-5 h-5 text-secondary" />
           </button>
@@ -156,10 +160,10 @@ export const BeanVarietyCard = () => {
         {/* Features */}
         <div className="mt-4 pt-4 border-t border-border/30 space-y-2 text-center">
           <p className="text-xs text-muted-foreground">
-            {beanVarieties.length} variedades disponibles
+            {beanVarieties.length} {t.varieties}
           </p>
           <p className="text-xs font-medium text-foreground">
-            Calidad Premium • Trazabilidad Completa • Alto Valor Nutricional
+            {t.features}
           </p>
         </div>
       </CardContent>

@@ -10,6 +10,8 @@ import maiz from "@/assets/maiz.jpeg";
 import garbanzo from "@/assets/garbanzo.jpg";
 import { useScrollAnimation, useMagneticHover } from "@/hooks/useScrollAnimation";
 import { BeanVarietyCard } from "./BeanVarietyCard";
+import { useLanguage } from "@/hooks/useLanguage";
+import { translations } from "@/lib/translations";
 import {
   Carousel,
   CarouselContent,
@@ -24,6 +26,8 @@ const Products = () => {
   const { ref: productsRef, isVisible: productsVisible } = useScrollAnimation(0.1);
   const { ref: qualityRef, isVisible: qualityVisible } = useScrollAnimation(0.2);
   const magneticRef = useMagneticHover();
+  const { language } = useLanguage();
+  const t = translations[language].products;
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -32,36 +36,36 @@ const Products = () => {
 
   const products = [
     {
-      name: "Soja",
-      type: "Grano Premium",
-      description: "Producida bajo estrictos estándares de calidad con control de trazabilidad desde el campo hasta su destino final.",
-      features: ["Control de Calidad", "Certificaciones", "Exportación Global"],
+      name: t.soja,
+      type: t.premium,
+      description: t.sojaDesc,
+      features: [t.qualityControl, t.certifications, t.globalExport],
       highlight: false,
       image: granos2
     },
     {
-      name: "Maíz",
-      type: "Grano Premium",
-      description: "Seleccionado cuidadosamente para satisfacer las demandas de mercados exigentes en Latinoamérica y el resto del mundo.",
-      features: ["Selección Rigurosa", "Mercados Globales", "Calidad Consistente"],
+      name: t.maiz,
+      type: t.premium,
+      description: t.maizDesc,
+      features: [t.rigorousSelection, t.globalMarkets, t.consistentQuality],
       highlight: false,
       image: maiz
     },
     {
-      name: "Garbanzo",
-      type: "Grano Premium",
-      description: "Procesado con los más altos estándares para garantizar la máxima calidad y satisfacción del cliente.",
-      features: ["Procesamiento Premium", "Estándares Altos", "Satisfacción Garantizada"],
+      name: t.garbanzo,
+      type: t.premium,
+      description: t.garbanzoDesc,
+      features: [t.premiumProcessing, t.highStandards, t.satisfactionGuarantee],
       highlight: false,
       image: garbanzo
     }
   ];
 
   const qualityPoints = [
-    "Trabajo responsable y profesional",
-    "Orientado a satisfacer las demandas de mercados exigentes",
-    "Control de trazabilidad desde el campo hasta el destino",
-    "Cada lote es resultado de trabajo orientado a la excelencia"
+    t.point1,
+    t.point2,
+    t.point3,
+    t.point4
   ];
 
   return (
@@ -74,7 +78,7 @@ const Products = () => {
               headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            Nuestros Productos
+            {t.title}
           </h2>
           <div
             className={`w-24 h-1 bg-secondary mx-auto mb-6 transition-all duration-1000 delay-200 ${
@@ -193,11 +197,11 @@ const Products = () => {
               <div className="flex items-center mb-4">
                 <Sparkles className="h-8 w-8 text-accent mr-3" />
                 <h3 className="font-heading font-bold text-2xl md:text-3xl text-primary">
-                  Calidad Garantizada
+                  {t.qualityGuaranteed}
                 </h3>
               </div>
               <p className="text-foreground text-lg mb-6 leading-relaxed">
-                Cada producto que exportamos es el resultado de un trabajo responsable y profesional, orientado a satisfacer las demandas de mercados exigentes en Latinoamérica y el resto del mundo.
+                {t.qualityText}
               </p>
             </div>
 
@@ -221,7 +225,7 @@ const Products = () => {
                 onClick={() => scrollToSection('contacto')}
                 className="bg-gradient-primary hover:opacity-90 transition-all duration-300 text-lg px-8 py-6"
               >
-                Solicitar Información
+                {t.btnRequest}
                 <div className="ml-2 transition-transform group-hover:translate-x-1">→</div>
               </Button>
             </div>

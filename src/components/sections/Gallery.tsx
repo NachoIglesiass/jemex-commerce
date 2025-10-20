@@ -12,6 +12,8 @@ import granos5 from "@/assets/granos5.jpeg";
 import porotoMung from "@/assets/poroto-mung.png";
 import porotoAlubia from "@/assets/poroto2.jpeg";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useLanguage } from "@/hooks/useLanguage";
+import { translations } from "@/lib/translations";
 import {
   Carousel,
   CarouselContent,
@@ -31,18 +33,20 @@ const Gallery = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [currentCollectionIndex, setCurrentCollectionIndex] = useState(0);
+  const { language } = useLanguage();
+  const t = translations[language].gallery;
 
   const galleryCollections = [
     { 
-      title: "Campos de Cultivo", 
-      description: "Extensos campos de cultivo en el norte argentino", 
-      category: "Cultivos",
+      title: t.fields, 
+      description: t.fieldsDesc, 
+      category: t.categoryCultivos,
       images: [campo1, campo2, campo3]
     },
     { 
-      title: "Productos Premium", 
-      description: "Granos de alta calidad: soja, maíz, poroto y garbanzo", 
-      category: "Productos",
+      title: t.products, 
+      description: t.productsDesc, 
+      category: t.categoryProducts,
       images: [grainsImage, granos2, granos3, granos4, granos5, porotoMung, porotoAlubia ]
     }
   ];
@@ -72,11 +76,11 @@ const Gallery = () => {
         {/* Header */}
         <div ref={headerRef as any} className="text-center mb-16">
           <h2 className={`font-heading font-bold text-4xl md:text-5xl text-primary mb-4 transition-all duration-1000 ${headerVisible ? 'animate-fade-in-down' : 'opacity-0 translate-y-8'}`}>
-            Galería
+            {t.title}
           </h2>
           <div className={`w-24 h-1 bg-secondary mx-auto mb-6 transition-all duration-1000 delay-200 ${headerVisible ? 'animate-fade-in-up w-32' : 'opacity-0 w-0'}`}></div>
           <p className={`text-xl text-muted-foreground max-w-3xl mx-auto transition-all duration-1000 delay-400 ${headerVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'}`}>
-            Conoce nuestras instalaciones, procesos y la calidad de nuestros productos a través de estas imágenes.
+            {t.subtitle}
           </p>
         </div>
 
