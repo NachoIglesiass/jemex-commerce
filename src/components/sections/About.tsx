@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { FlipCard } from "@/components/ui/flip-card";
 import { Target, Eye, Medal, Award, Shield, CheckCircle2, Handshake } from "lucide-react";
-import workerImage from "@/assets/worker-soybean-field.jpg";
+import workerImage from "@/assets/worker-field-new.jpg";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 
