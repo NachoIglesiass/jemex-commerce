@@ -125,8 +125,10 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         <div className={cn(
-          "md:hidden transition-all duration-300 ease-in-out overflow-hidden backdrop-blur-lg border-t",
-          isScrolled ? "bg-background/95 border-border" : "bg-primary/85 border-primary-foreground/20",
+          "md:hidden transition-all duration-300 ease-in-out overflow-hidden backdrop-blur-sm border-t",
+          isScrolled ? "bg-background/95 border-border" : "bg-primary/70 border-primary-foreground/20",
+
+
           isOpen ? "max-h-80 opacity-100 pb-4" : "max-h-0 opacity-0"
         )}>
           <div className="py-4 space-y-3">
