@@ -126,7 +126,7 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         <div className={cn(
           "md:hidden transition-all duration-300 ease-in-out overflow-hidden backdrop-blur-lg border-t",
-          isScrolled ? "bg-background/95 border-border" : "bg-primary/85 border-primary-foreground/20",
+          isScrolled ? "bg-background/95 border-border" : "bg-slate-900/95 border-slate-700/30",
           isOpen ? "max-h-80 opacity-100 pb-4" : "max-h-0 opacity-0"
         )}>
           <div className="py-4 space-y-3">
@@ -135,8 +135,8 @@ const Navigation = () => {
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
                 className={cn(
-                  "block w-full text-left hover:text-primary transition-colors duration-200 font-medium py-3 px-4 hover:bg-primary/5 rounded-md",
-                  isScrolled ? "text-foreground" : "text-primary-foreground"
+                  "block w-full text-left hover:text-primary transition-colors duration-200 font-medium py-3 px-4 hover:bg-accent/10 rounded-md",
+                  "text-white"
                 )}
               >
                 {item.label}
