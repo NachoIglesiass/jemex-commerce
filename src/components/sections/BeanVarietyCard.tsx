@@ -23,10 +23,28 @@ export const BeanVarietyCard = () => {
       color: "text-gray-800"
     },
     {
-      name: t.porotoRojo,
-      description: t.porotoRojoDesc,
+      name: t.porotoRojoDark,
+      description: t.porotoRojoDarkDesc,
       image: poroto3,
       color: "text-red-700"
+    },
+    {
+      name: t.porotoRojoLight,
+      description: t.porotoRojoLightDesc,
+      image: poroto3,
+      color: "text-red-500"
+    },
+    {
+      name: t.porotoCranberry,
+      description: t.porotoCranberryDesc,
+      image: poroto2,
+      color: "text-rose-600"
+    },
+    {
+      name: t.porotoAdzuki,
+      description: t.porotoAdzukiDesc,
+      image: poroto3,
+      color: "text-red-800"
     },
     {
       name: t.porotoAlubia,
