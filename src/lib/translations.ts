@@ -140,6 +140,11 @@ export const translations = {
       tagline: 'Exportamos calidad desde el norte argentino',
       developedBy: 'Desarrollado por',
     },
+    whatsapp: {
+      phone: '5493876123456',
+      message: 'Estimado equipo de Jemex Commerce, me comunico para solicitar información sobre sus productos de legumbres y las condiciones de exportación. Agradezco de antemano su atención y quedo a disposición para continuar la conversación.',
+      ariaLabel: 'Contactar por WhatsApp',
+    },
   },
   en: {
     nav: {
@@ -281,6 +286,11 @@ export const translations = {
       rights: 'All rights reserved.',
       tagline: 'Exporting quality from northern Argentina',
       developedBy: 'Developed by',
+    },
+    whatsapp: {
+      phone: '5493876123456',
+      message: 'Dear Jemex Commerce team, I am reaching out to request information about your legume products and export conditions. I appreciate your time and look forward to continuing this conversation.',
+      ariaLabel: 'Contact via WhatsApp',
     },
   },
 };
