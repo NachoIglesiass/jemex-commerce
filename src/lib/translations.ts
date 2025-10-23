@@ -141,7 +141,7 @@ export const translations = {
       developedBy: 'Desarrollado por',
     },
     whatsapp: {
-      phone: '5493876123456',
+      phone: '5493876471947',
       message: 'Estimado equipo de Jemex Commerce, me comunico para solicitar información sobre sus productos de legumbres y las condiciones de exportación. Agradezco de antemano su atención y quedo a disposición para continuar la conversación.',
       ariaLabel: 'Contactar por WhatsApp',
     },
@@ -288,7 +288,7 @@ export const translations = {
       developedBy: 'Developed by',
     },
     whatsapp: {
-      phone: '5493876123456',
+      phone: '5493876471947',
       message: 'Dear Jemex Commerce team, I am reaching out to request information about your legume products and export conditions. I appreciate your time and look forward to continuing this conversation.',
       ariaLabel: 'Contact via WhatsApp',
     },
