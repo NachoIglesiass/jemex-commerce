@@ -2,10 +2,13 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
-import poroto1 from "@/assets/poroto1.jpg";
-import poroto2 from "@/assets/poroto2.jpeg";
-import poroto3 from "@/assets/poroto3.jpg";
+import porotoAdzuki from "@/assets/poroto-adzuki.png";
+import porotoNegro from "@/assets/poroto-negro.png";
+import porotoCranberry from "@/assets/poroto-cranberry.png";
+import porotoRojoLight from "@/assets/poroto-red-light.png";
+import porotoRojoDark from "@/assets/poroto-red-dark.png";
 import porotoMung from "@/assets/poroto-mung.png";
+import porotoAlubia from "@/assets/poroto-alubia.png";
 import { useLanguage } from "@/hooks/useLanguage";
 import { translations } from "@/lib/translations";
 
@@ -19,37 +22,37 @@ export const BeanVarietyCard = () => {
     {
       name: t.porotoNegro,
       description: t.porotoNegroDesc,
-      image: poroto1,
+      image: porotoNegro,
       color: "text-gray-800"
     },
     {
       name: t.porotoRojoDark,
       description: t.porotoRojoDarkDesc,
-      image: poroto3,
+      image: porotoRojoDark,
       color: "text-red-700"
     },
     {
       name: t.porotoRojoLight,
       description: t.porotoRojoLightDesc,
-      image: poroto3,
+      image: porotoRojoLight,
       color: "text-red-500"
     },
     {
       name: t.porotoCranberry,
       description: t.porotoCranberryDesc,
-      image: poroto2,
+      image: porotoCranberry,
       color: "text-rose-600"
     },
     {
       name: t.porotoAdzuki,
       description: t.porotoAdzukiDesc,
-      image: poroto3,
+      image: porotoAdzuki,
       color: "text-red-800"
     },
     {
       name: t.porotoAlubia,
       description: t.porotoAlubiaDesc,
-      image: poroto2,
+      image: porotoAlubia,
       color: "text-amber-700"
     },
     {

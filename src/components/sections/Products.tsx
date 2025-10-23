@@ -2,12 +2,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Wheat, CheckCircle, Star, Sparkles } from "lucide-react";
-import poroto1 from "@/assets/poroto1.jpg";
-import poroto2 from "@/assets/poroto2.jpeg";
-import poroto3 from "@/assets/poroto3.jpg";
-import granos2 from "@/assets/granos2.jpeg";
-import maiz from "@/assets/maiz.jpeg";
-import garbanzo from "@/assets/garbanzo.jpg";
+import soja from "@/assets/soja.png";
+import maiz from "@/assets/maiz.png";
+import garbanzo from "@/assets/garbanzo.png";
 import { useScrollAnimation, useMagneticHover } from "@/hooks/useScrollAnimation";
 import { BeanVarietyCard } from "./BeanVarietyCard";
 import { useLanguage } from "@/hooks/useLanguage";
@@ -41,7 +38,7 @@ const Products = () => {
       description: t.sojaDesc,
       features: [t.qualityControl, t.certifications, t.globalExport],
       highlight: false,
-      image: granos2
+      image: soja
     },
     {
       name: t.maiz,

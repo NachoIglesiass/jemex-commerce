@@ -4,13 +4,16 @@ import heroImage from "@/assets/hero-agriculture.jpg";
 import campo1 from "@/assets/campo1.jpeg";
 import campo2 from "@/assets/campo2.jpeg";
 import campo3 from "@/assets/campo3.jpeg";
-import grainsImage from "@/assets/garbanzo.jpg";
-import granos2 from "@/assets/granos2.jpeg";
-import granos3 from "@/assets/granos3.jpeg";
-import granos4 from "@/assets/granos4.jpeg";
-import granos5 from "@/assets/granos5.jpeg";
+import garbanzo from "@/assets/garbanzo.png";
+import maiz from "@/assets/maiz.png";
+import soja from "@/assets/soja.png";
+import porotoAdzuki from "@/assets/poroto-adzuki.png";
+import porotoNegro from "@/assets/poroto-negro.png";
+import porotoCranberry from "@/assets/poroto-cranberry.png";
+import porotoRojoLight from "@/assets/poroto-red-light.png";
+import porotoRojoDark from "@/assets/poroto-red-dark.png";
 import porotoMung from "@/assets/poroto-mung.png";
-import porotoAlubia from "@/assets/poroto2.jpeg";
+import porotoAlubia from "@/assets/poroto-alubia.png";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useLanguage } from "@/hooks/useLanguage";
 import { translations } from "@/lib/translations";
@@ -47,7 +50,7 @@ const Gallery = () => {
       title: t.products, 
       description: t.productsDesc, 
       category: t.categoryProducts,
-      images: [grainsImage, granos2, granos3, granos4, granos5, porotoMung, porotoAlubia ]
+      images: [garbanzo, maiz ,porotoAdzuki, porotoNegro, porotoCranberry, porotoRojoLight, porotoRojoDark, porotoMung, porotoAlubia, soja ]
     }
   ];
 
