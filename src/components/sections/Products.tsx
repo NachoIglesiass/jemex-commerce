@@ -109,7 +109,7 @@ const Products = () => {
             </div>
 
             <CardHeader className="pb-4 relative z-10">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden border-2 border-primary/20">
+              <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden border-2 border-primary/20">
                 <img
                   src={product.image}
                   alt={`Icono ${product.name}`}
