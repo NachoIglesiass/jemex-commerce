@@ -99,9 +99,7 @@ export const translations = {
     contact: {
       title: 'Contacto',
       subtitle: '¿Querés conocer más? Estamos aquí para responder todas tus consultas sobre nuestros productos y servicios.',
-      contactVia: '¡Comunícate con nosotros!',
-      or: 'o',
-      emailForm: 'Formulario Email',
+      contactOptions: 'Puedes comunicarte usando el botón de WhatsApp flotante (esquina inferior derecha) o completando el formulario de contacto a continuación.',
       contactInfo: 'Información de Contacto',
       email: 'Email',
       emailValue: 'jemex.commerce@gmail.com',
@@ -249,9 +247,7 @@ export const translations = {
     contact: {
       title: 'Contact',
       subtitle: 'Want to know more? We are here to answer all your questions about our products and services.',
-      contactVia: 'Get in touch with us!',
-      or: 'or',
-      emailForm: 'Email Form',
+      contactOptions: 'You can get in touch using the floating WhatsApp button (bottom right corner) or by completing the contact form below.',
       contactInfo: 'Contact Information',
       email: 'Email',
       emailValue: 'jemex.commerce@gmail.com',
