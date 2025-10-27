@@ -85,12 +85,12 @@ const Footer = () => {
                 <MessageCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
                 <div>
                   <a
-                    href="https://wa.me/5493876471947?text=Estimado%20equipo%20de%20Jemex%20Commerce%2C%20me%20comunico%20para%20solicitar%20informaci%C3%B3n%20sobre%20sus%20productos%20de%20legumbres%20y%20las%20condiciones%20de%20exportaci%C3%B3n.%20Agradezco%20de%20antemano%20su%20atenci%C3%B3n%20y%20quedo%20a%20disposici%C3%B3n%20para%20continuar%20la%20conversaci%C3%B3n."
+                    href="https://wa.me/5493876668361?text=Estimado%20equipo%20de%20Jemex%20Commerce%2C%20me%20comunico%20para%20solicitar%20informaci%C3%B3n%20sobre%20sus%20productos%20de%20legumbres%20y%20las%20condiciones%20de%20exportaci%C3%B3n.%20Agradezco%20de%20antemano%20su%20atenci%C3%B3n%20y%20quedo%20a%20disposici%C3%B3n%20para%20continuar%20la%20conversaci%C3%B3n."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary-foreground/80 hover:text-secondary transition-colors"
                   >
-                    WhatsApp: +54 9 387 647-1947
+                    WhatsApp: +54 9 3876 66-8361
                   </a>
                 </div>
               </div>

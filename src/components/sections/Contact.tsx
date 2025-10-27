@@ -6,9 +6,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, MapPin, Send, Package, Info, FileText } from "lucide-react";
+import { Mail, MapPin, Send, Package, Info, FileText, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 import { translations } from "@/lib/translations";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -82,6 +83,26 @@ const Contact = () => {
             {t.subtitle}
           </p>
         </div>
+
+        {/* Communication Options Alert */}
+        <Alert className="mb-8 max-w-4xl mx-auto border-2 border-secondary/30 bg-gradient-to-r from-secondary/5 to-primary/5">
+          <AlertDescription className="flex flex-col sm:flex-row items-center justify-center gap-4 text-center sm:text-left">
+            <div className="flex items-center gap-2 text-lg font-semibold text-primary">
+              <MessageCircle className="w-6 h-6 text-[#25D366]" />
+              <span>{t.contactVia}</span>
+            </div>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              <Badge variant="secondary" className="px-4 py-2 text-base bg-[#25D366] hover:bg-[#20BA5A] text-white">
+                WhatsApp
+              </Badge>
+              <span className="text-muted-foreground font-medium">{t.or}</span>
+              <Badge variant="secondary" className="px-4 py-2 text-base bg-secondary hover:bg-secondary/80 text-white">
+                <Mail className="w-4 h-4 mr-1" />
+                {t.emailForm}
+              </Badge>
+            </div>
+          </AlertDescription>
+        </Alert>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Contact Information */}

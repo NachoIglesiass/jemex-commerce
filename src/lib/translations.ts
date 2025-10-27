@@ -99,6 +99,9 @@ export const translations = {
     contact: {
       title: 'Contacto',
       subtitle: '¿Querés conocer más? Estamos aquí para responder todas tus consultas sobre nuestros productos y servicios.',
+      contactVia: '¡Comunícate con nosotros!',
+      or: 'o',
+      emailForm: 'Formulario Email',
       contactInfo: 'Información de Contacto',
       email: 'Email',
       emailValue: 'jemex.commerce@gmail.com',
@@ -141,7 +144,7 @@ export const translations = {
       developedBy: 'Desarrollado por',
     },
     whatsapp: {
-      phone: '5493876471947',
+      phone: '5493876668361',
       message: 'Estimado equipo de Jemex Commerce, me comunico para solicitar información sobre sus productos de legumbres y las condiciones de exportación. Agradezco de antemano su atención y quedo a disposición para continuar la conversación.',
       ariaLabel: 'Contactar por WhatsApp',
     },
@@ -246,6 +249,9 @@ export const translations = {
     contact: {
       title: 'Contact',
       subtitle: 'Want to know more? We are here to answer all your questions about our products and services.',
+      contactVia: 'Get in touch with us!',
+      or: 'or',
+      emailForm: 'Email Form',
       contactInfo: 'Contact Information',
       email: 'Email',
       emailValue: 'jemex.commerce@gmail.com',
@@ -288,7 +294,7 @@ export const translations = {
       developedBy: 'Developed by',
     },
     whatsapp: {
-      phone: '5493876471947',
+      phone: '5493876668361',
       message: 'Dear Jemex Commerce team, I am reaching out to request information about your legume products and export conditions. I appreciate your time and look forward to continuing this conversation.',
       ariaLabel: 'Contact via WhatsApp',
     },
