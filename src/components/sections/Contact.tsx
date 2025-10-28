@@ -4,11 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, MapPin, Send, Package, Info, FileText } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 import { translations } from "@/lib/translations";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -108,6 +108,13 @@ const Contact = () => {
             {t.subtitle}
           </p>
         </div>
+
+        {/* Communication Options Alert */}
+        <Alert className="mb-8 max-w-4xl mx-auto border-primary/20 bg-primary/5">
+          <AlertDescription className="text-center text-base text-foreground">
+            {t.contactOptions}
+          </AlertDescription>
+        </Alert>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Contact Information */}
