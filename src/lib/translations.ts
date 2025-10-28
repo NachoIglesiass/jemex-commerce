@@ -102,7 +102,6 @@ export const translations = {
       contactInfo: 'Información de Contacto',
       email: 'Email',
       emailValue: 'jemex.commerce@gmail.com',
-      emailDesc: 'Respuesta en 24 horas',
       location: 'Ubicación',
       locationValue: 'Rosario de la Frontera, Salta',
       locationDesc: 'Argentina',

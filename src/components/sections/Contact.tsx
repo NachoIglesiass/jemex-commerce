@@ -23,24 +23,50 @@ const Contact = () => {
     inquiry: "general"
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Simulate form submission
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  try {
+    const response = await fetch("https://formspree.io/f/xjkpyqwa", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        nombre: formData.name,
+        email: formData.email,
+        empresa: formData.company,
+        tipo_consulta: formData.inquiry,
+        mensaje: formData.message,
+      }),
+    });
+
+    if (response.ok) {
+      toast({
+        title: t.messageSent,
+        description: t.messageDesc,
+      });
+
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        message: "",
+        inquiry: "general",
+      });
+    } else {
+      toast({
+        title: "Error",
+        description: "Hubo un problema al enviar el mensaje. Intenta nuevamente.",
+      });
+    }
+  } catch (error) {
     toast({
-      title: t.messageSent,
-      description: t.messageDesc,
+      title: "Error",
+      description: "No se pudo conectar con el servidor. Intenta más tarde.",
     });
-    
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      company: "",
-      message: "",
-      inquiry: "general"
-    });
-  };
+  }
+};
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
