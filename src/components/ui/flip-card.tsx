@@ -6,10 +6,11 @@ interface FlipCardProps {
   title: string;
   content: React.ReactNode;
   className?: string;
+  isFlipped: boolean;
+  onFlip: (flipped: boolean) => void;
 }
 
-const FlipCard = ({ icon, title, content, className }: FlipCardProps) => {
-  const [isFlipped, setIsFlipped] = React.useState(false);
+const FlipCard = ({ icon, title, content, className, isFlipped, onFlip }: FlipCardProps) => {
 
   return (
     <div 
@@ -37,7 +38,7 @@ const FlipCard = ({ icon, title, content, className }: FlipCardProps) => {
             {title}
           </h4>
           <button 
-            onClick={() => setIsFlipped(true)}
+            onClick={() => onFlip(true)}
             className="px-8 py-3 text-sm font-semibold text-white bg-gradient-to-r from-secondary to-secondary/90 hover:from-secondary/90 hover:to-secondary rounded-full shadow-md hover:shadow-lg transition-all duration-300"
           >
             Ver contenido
@@ -71,7 +72,7 @@ const FlipCard = ({ icon, title, content, className }: FlipCardProps) => {
 
           {/* Botón Volver */}
           <button 
-            onClick={() => setIsFlipped(false)}
+            onClick={() => onFlip(false)}
             className="mt-auto mb-4 sm:mb-2 px-8 py-3 text-sm font-semibold text-white bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
           >
             Volver
