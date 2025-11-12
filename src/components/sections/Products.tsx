@@ -103,7 +103,7 @@ const Products = () => {
             <div className="absolute inset-0 opacity-10 transition-opacity duration-500 hover:opacity-15">
               <img
                 src={product.image}
-                alt={`${product.name} de alta calidad`}
+                alt={`${product.name} premium de exportación - Jemex Commerce exportadora Argentina legumbres granos comercio internacional`}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -112,7 +112,7 @@ const Products = () => {
               <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden border-2 border-primary/20">
                 <img
                   src={product.image}
-                  alt={`Icono ${product.name}`}
+                  alt={`${product.name} alta calidad exportación Argentina Jemex Commerce`}
                   className="w-full h-full object-cover"
                 />
               </div>

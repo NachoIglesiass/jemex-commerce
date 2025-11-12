@@ -112,7 +112,7 @@ const Gallery = () => {
                       <CarouselItem key={imgIndex}>
                         <img
                           src={image}
-                          alt={`${collection.description} - imagen ${imgIndex + 1}`}
+                          alt={`Jemex Commerce - ${collection.description} - ${index === 0 ? 'Campos de cultivo de legumbres y granos en Argentina' : 'Productos de exportación: poroto, soja, maíz, garbanzo'} imagen ${imgIndex + 1}`}
                           className="w-full h-64 md:h-80 object-cover cursor-pointer"
                           onClick={() => openModal(index, imgIndex)}
                         />
@@ -175,7 +175,7 @@ const Gallery = () => {
 
             <img
               src={galleryCollections[currentCollectionIndex].images[currentImageIndex]}
-              alt={`${galleryCollections[currentCollectionIndex].description} - imagen ${currentImageIndex + 1}`}
+              alt={`Jemex Commerce exportadora Argentina - ${galleryCollections[currentCollectionIndex].description} - ${currentCollectionIndex === 0 ? 'Cultivos de legumbres y granos' : 'Productos de exportación poroto soja maíz garbanzo'} imagen ${currentImageIndex + 1}`}
               className="max-w-full max-h-full object-contain p-4"
             />
 

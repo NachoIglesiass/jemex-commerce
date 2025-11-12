@@ -41,7 +41,7 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 py-8">
         <div className="max-w-6xl mx-auto text-center text-primary-foreground">
 
-          {/* Tagline */}
+          {/* Main Heading - H1 for SEO */}
           <h1
             className={`text-xl md:text-3xl lg:text-4xl font-extrabold mb-10 text-primary-foreground transition-all duration-1000 mt-8 md:mt-0 tracking-tight ${
               isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-8"

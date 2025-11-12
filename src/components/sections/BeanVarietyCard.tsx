@@ -96,7 +96,7 @@ export const BeanVarietyCard = () => {
       <div className="absolute inset-0 opacity-10 transition-opacity duration-700">
         <img
           src={currentBean.image}
-          alt={currentBean.name}
+          alt={`${currentBean.name} - Jemex Commerce exportadora de poroto premium Argentina comercio internacional legumbres`}
           className={`w-full h-full object-cover transition-all duration-700 ${
             isTransitioning ? 'opacity-0 scale-110' : 'opacity-100 scale-100'
           }`}
@@ -107,7 +107,7 @@ export const BeanVarietyCard = () => {
         <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden border-2 border-secondary/30">
           <img
             src={currentBean.image}
-            alt={currentBean.name}
+            alt={`${currentBean.name} calidad exportación - Jemex Commerce Argentina poroto legumbres`}
             className={`w-full h-full object-cover transition-all duration-700 ${
               isTransitioning ? 'opacity-0 scale-125 rotate-12' : 'opacity-100 scale-100 rotate-0'
             }`}

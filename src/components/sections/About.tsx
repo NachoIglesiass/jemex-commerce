@@ -43,7 +43,7 @@ const About = () => {
             <div className="relative overflow-hidden rounded-2xl shadow-elegant">
               <img 
                 src={workerImage} 
-                alt="Trabajador agrícola inspeccionando cultivos en el campo"
+                alt="Trabajador de Jemex Commerce inspeccionando cultivos de legumbres y granos en campos argentinos - Exportadora de poroto, soja, maíz y garbanzo"
                 className="w-full h-[400px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
