@@ -6,6 +6,7 @@ import workerImage from "@/assets/worker.png";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useLanguage } from "@/hooks/useLanguage";
 import { translations } from "@/lib/translations";
+import { useState } from "react";
 
 
 
@@ -15,6 +16,7 @@ const About = () => {
   const { ref: valuesRef, isVisible: valuesVisible } = useScrollAnimation(0.1);
   const { language } = useLanguage();
   const t = translations[language].about;
+  const [flippedCard, setFlippedCard] = useState<string | null>(null);
   
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -74,6 +76,8 @@ const About = () => {
                   {t.missionText}
                 </p>
               }
+              isFlipped={flippedCard === 'mission'}
+              onFlip={(flipped) => setFlippedCard(flipped ? 'mission' : null)}
             />
 
             <FlipCard
@@ -84,6 +88,8 @@ const About = () => {
                   {t.visionText}
                 </p>
               }
+              isFlipped={flippedCard === 'vision'}
+              onFlip={(flipped) => setFlippedCard(flipped ? 'vision' : null)}
             />
 
             <FlipCard
@@ -109,6 +115,8 @@ const About = () => {
                   </div>
                 </div>
               }
+              isFlipped={flippedCard === 'values'}
+              onFlip={(flipped) => setFlippedCard(flipped ? 'values' : null)}
             />
           </div>
         </div>
