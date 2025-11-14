@@ -66,14 +66,14 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex justify-center md:justify-start items-start space-x-3">
                 <Mail className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
-                <div>
-                  <a
-                    href="mailto:jemex.commerce@gmail.com"
-                    className="text-primary-foreground/80 hover:text-secondary transition-colors"
-                  >
-                    jemex.commerce@gmail.com
-                  </a>
-                </div>
+              <div>
+                <a
+                  href="mailto:info@jemexcommerce.com.ar"
+                  className="text-primary-foreground/80 hover:text-secondary transition-colors"
+                >
+                  info@jemexcommerce.com.ar
+                </a>
+              </div>
               </div>
               <div className="flex justify-center md:justify-start items-start space-x-3">
                 <MapPin className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
