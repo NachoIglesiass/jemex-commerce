@@ -130,9 +130,16 @@ const Footer = () => {
             <p className="text-primary-foreground/60 text-sm">
               {t.tagline}
             </p>
-            <p className="text-sm font-semibold text-secondary hover:text-secondary/80 transition-colors">
-                {t.developedBy}{" "}
-              <span className="text-secondary font-bold">Ignacio Iglesias</span>
+            <p className="text-sm font-semibold text-primary-foreground/60">
+              {t.developedBy}{" "}
+              <a
+                href="https://www.linkedin.com/in/ignacio-iglesias-a482a7278/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-secondary font-bold hover:text-secondary/80 transition-colors"
+              >
+                Ignacio Iglesias
+              </a>
             </p>
           </div>
         </div>
