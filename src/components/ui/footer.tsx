@@ -1,4 +1,4 @@
-import { Mail, MapPin, Leaf, MessageCircle } from "lucide-react";
+import { Mail, MapPin, Leaf, MessageCircle, Linkedin, Instagram } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 import { translations } from "@/lib/translations";
 
@@ -94,6 +94,28 @@ const Footer = () => {
                     WhatsApp: +54 9 3876 66-8361
                   </a>
                 </div>
+              </div>
+              
+              {/* Social Media Links */}
+              <div className="flex justify-center md:justify-start items-center space-x-4 mt-6">
+                <a
+                  href="https://www.linkedin.com/in/jemex-commerce-447b7b398"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-secondary hover:text-secondary/80 transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="h-6 w-6" />
+                </a>
+                <a
+                  href="https://www.instagram.com/jemexcommerce"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-secondary hover:text-secondary/80 transition-colors"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="h-6 w-6" />
+                </a>
               </div>
             </div>
           </div>
